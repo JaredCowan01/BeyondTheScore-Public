@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BeyondTheScore.ApiService.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ImportController : ControllerBase
