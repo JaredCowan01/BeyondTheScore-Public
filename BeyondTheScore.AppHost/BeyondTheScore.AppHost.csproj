@@ -1,0 +1,21 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AspireUseCliBundle>true</AspireUseCliBundle>
+        <UserSecretsId>9ebe8d52-c9b2-472b-831a-cd70083a3d5c</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BeyondTheScore.ApiService\BeyondTheScore.ApiService.csproj"/>
+        <ProjectReference Include="..\BeyondTheScore.Web\BeyondTheScore.Web.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Aspire.Hosting.Azure.AppService" Version="13.6.4" />
+    </ItemGroup>
+
+</Project>

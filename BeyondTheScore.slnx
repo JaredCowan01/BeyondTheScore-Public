@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BeyondTheScore.ApiService/BeyondTheScore.ApiService.csproj" />
+  <Project Path="BeyondTheScore.AppHost/BeyondTheScore.AppHost.csproj" />
+  <Project Path="BeyondTheScore.Dto/BeyondTheScore.Dto.csproj" />
+  <Project Path="BeyondTheScore.ServiceDefaults/BeyondTheScore.ServiceDefaults.csproj" />
+  <Project Path="BeyondTheScore.Web/BeyondTheScore.Web.csproj" />
+</Solution>

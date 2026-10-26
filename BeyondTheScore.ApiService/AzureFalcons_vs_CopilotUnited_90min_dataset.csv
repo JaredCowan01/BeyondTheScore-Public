@@ -1,0 +1,541 @@
+event_id,minute,second,match_id,home_team,away_team,event_type,team,player_name,x_coord,y_coord,end_x_coord,end_y_coord,outcome,possession_id,attack_sequence_id,pressure_level,pass_distance,pass_difficulty,player_speed,ball_speed,expected_goals,score_home,score_away,significance_score,narrative_trigger,momentum_delta,story_arc
+1,1,40,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,13,86,35,100,Successful,1,1,10,21.9,3.9,15.5,70.5,0.0,0,0,21,0,-9.5,Chaos
+2,1,45,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_9,35,0,58,0,Successful,1,1,6,16.1,22.3,29.1,30.2,0.0,0,0,64,0,-2.4,Momentum Shift
+3,1,54,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_5,68,15,67,0,Successful,1,1,5,38.2,62.2,31.5,77.7,0.0,0,0,80,0,4.1,Control
+4,1,42,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_5,12,48,4,57,Failed,1,1,3,19.8,21.7,16.7,113.7,0.0,0,0,56,0,3.0,Chaos
+5,1,34,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_3,81,88,91,82,Successful,2,1,1,14.2,4.2,17.9,46.8,0.0,0,0,51,0,-5.8,Momentum Shift
+6,1,13,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_7,18,33,1,28,Successful,2,1,5,34.9,43.4,24.6,56.2,0.0,0,0,78,0,9.9,Chaos
+7,2,32,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_1,20,87,22,100,Successful,3,1,7,20.3,99.6,23.2,117.1,0.0,0,0,18,0,7.2,Control
+8,2,43,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_11,98,82,94,69,Successful,4,1,7,11.3,1.3,28.1,92.0,0.0,0,0,47,0,9.4,Chaos
+9,2,32,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,77,25,61,28,Successful,5,1,9,43.1,92.3,33.0,79.9,0.0,0,0,30,0,-0.2,Control
+10,2,59,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,72,10,52,21,Successful,5,1,9,35.6,13.7,21.9,75.0,0.0,0,0,18,0,-4.7,Balanced
+11,2,13,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_4,85,83,83,91,Successful,5,1,2,18.5,59.2,15.8,42.0,0.28,0,0,76,0,-8.6,Control
+12,2,14,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_1,30,35,47,46,Successful,5,2,9,10.3,93.6,24.3,67.3,0.0,0,0,37,0,5.7,Balanced
+13,3,12,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_11,59,93,37,79,Successful,6,2,7,34.1,80.3,12.7,39.2,0.0,0,0,17,0,0.7,Chaos
+14,3,27,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,56,70,37,53,Failed,6,2,1,43.8,92.7,31.2,36.6,0.0,0,0,79,0,-0.3,Chaos
+15,3,55,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,49,33,74,42,Successful,6,2,7,32.9,73.3,29.6,86.2,0.0,0,0,46,0,-0.3,Chaos
+16,3,18,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_1,95,40,73,23,Successful,6,2,9,41.8,53.6,11.4,70.8,0.0,0,0,71,0,7.0,Control
+17,3,38,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_4,72,31,84,49,Failed,6,2,10,8.3,66.1,24.1,51.6,0.0,0,0,15,0,-4.8,Momentum Shift
+18,3,15,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_3,40,96,19,76,Successful,6,2,2,7.9,22.1,16.6,113.3,0.38,0,0,68,0,7.6,Chaos
+19,4,23,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_8,78,83,86,63,Successful,6,3,5,42.3,11.3,32.0,46.4,0.0,0,0,80,0,7.8,Chaos
+20,4,17,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_4,81,33,88,44,Successful,6,3,2,30.4,83.1,11.1,53.4,0.55,0,0,42,0,-7.4,Momentum Shift
+21,4,10,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_9,14,9,33,0,Successful,6,4,9,10.9,13.6,17.7,109.9,0.04,0,0,79,0,5.9,Control
+22,4,57,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,99,71,100,90,Successful,6,5,4,39.6,97.6,30.3,108.1,0.0,0,0,29,0,-9.5,Momentum Shift
+23,4,50,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_11,34,20,59,6,Successful,6,5,1,39.3,23.0,30.4,66.0,0.0,0,0,58,0,-3.9,Chaos
+24,4,14,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,8,98,0,100,Successful,7,5,7,32.2,84.5,18.3,22.8,0.0,0,0,75,0,7.5,Momentum Shift
+25,5,11,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,44,93,69,93,Successful,7,5,10,44.4,12.4,32.5,39.0,0.0,0,0,65,0,-9.1,Balanced
+26,5,0,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_9,94,85,81,88,Failed,7,5,6,29.9,66.7,13.1,110.0,0.06,0,0,65,0,0.1,Balanced
+27,5,20,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_5,85,48,100,39,Successful,7,6,7,26.9,1.0,17.2,63.0,0.0,0,0,48,0,1.6,Momentum Shift
+28,5,29,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,94,21,100,6,Successful,7,6,9,31.6,62.3,12.3,115.2,0.0,0,0,46,0,-5.3,Momentum Shift
+29,5,14,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,60,78,84,62,Successful,7,6,7,40.4,58.0,28.0,58.4,0.0,0,0,68,0,-2.0,Chaos
+30,5,41,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_2,89,66,93,49,Successful,7,6,2,23.3,80.3,26.7,118.8,0.0,0,0,41,0,1.9,Balanced
+31,6,39,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_9,57,20,79,30,Failed,7,6,5,35.1,84.1,16.9,97.8,0.0,0,0,67,0,-0.3,Chaos
+32,6,17,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,69,10,52,0,Successful,7,6,7,32.8,70.9,11.6,60.8,0.0,0,0,39,0,0.9,Balanced
+33,6,3,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,89,2,100,18,Successful,7,6,8,5.2,35.8,28.8,105.3,0.0,0,0,58,0,9.1,Balanced
+34,6,34,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_9,62,28,54,35,Failed,7,6,1,20.6,67.2,30.0,92.4,0.0,0,0,72,0,6.8,Chaos
+35,6,39,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_7,10,82,12,70,Successful,7,6,3,7.0,38.5,15.3,52.7,0.0,0,0,69,0,5.2,Balanced
+36,6,17,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,2,95,11,78,Successful,7,6,4,31.0,78.3,26.3,95.4,0.0,0,0,54,0,9.0,Chaos
+37,7,53,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,14,72,2,81,Successful,7,6,6,11.7,61.1,28.7,31.5,0.0,0,0,42,0,6.4,Momentum Shift
+38,7,6,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_5,48,50,68,42,Failed,7,6,10,32.6,63.1,12.5,97.2,0.0,0,0,19,0,7.0,Control
+39,7,50,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,47,8,54,9,Successful,7,6,7,37.9,11.4,34.0,83.6,0.0,0,0,11,0,6.6,Chaos
+40,7,27,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_9,68,99,73,100,Successful,7,6,10,15.7,85.3,30.8,28.7,0.0,0,0,65,0,7.6,Chaos
+41,7,48,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_10,63,41,49,52,Successful,8,6,5,40.2,70.4,16.9,21.0,0.23,0,0,37,0,9.0,Control
+42,7,15,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_8,60,82,80,93,Successful,8,7,1,8.7,22.9,27.3,50.6,0.0,0,0,67,0,1.6,Balanced
+43,8,35,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_7,45,89,49,86,Successful,8,7,5,14.2,72.4,17.9,94.3,0.0,0,0,49,0,9.0,Chaos
+44,8,12,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,97,67,100,65,Successful,9,7,4,16.8,36.7,17.6,90.8,0.0,0,0,22,0,-7.5,Control
+45,8,3,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_3,13,1,24,0,Successful,9,7,8,22.6,19.3,11.3,114.1,0.0,0,0,70,0,-0.4,Control
+46,8,25,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_10,19,72,13,57,Successful,9,7,2,27.3,42.2,24.9,81.8,0.0,0,0,41,0,5.5,Balanced
+47,8,28,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_5,39,72,53,55,Failed,9,7,4,30.0,27.2,12.0,44.0,0.0,0,0,22,0,1.0,Chaos
+48,8,0,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_10,36,90,29,99,Successful,10,7,4,42.0,79.0,25.6,86.1,0.0,0,0,19,0,8.7,Balanced
+49,9,7,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,18,9,0,0,Successful,10,7,10,35.0,57.4,17.2,32.4,0.0,0,0,49,0,3.8,Balanced
+50,9,17,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_8,55,94,50,100,Successful,10,7,1,8.7,96.2,30.9,77.5,0.0,0,0,42,0,9.0,Momentum Shift
+51,9,36,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_3,35,23,47,30,Successful,10,7,2,23.8,41.4,18.0,30.5,0.0,0,0,72,0,-6.8,Balanced
+52,9,44,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_11,70,4,74,0,Successful,10,7,5,17.9,97.0,20.1,71.5,0.0,0,0,50,0,9.8,Balanced
+53,9,26,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,80,56,100,39,Successful,11,7,5,27.0,92.8,21.0,89.8,0.0,0,0,36,0,-7.6,Chaos
+54,9,45,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,28,14,32,1,Successful,11,7,8,42.3,29.9,27.6,61.5,0.0,0,0,29,0,-0.4,Balanced
+55,10,15,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,65,95,48,79,Failed,11,7,7,18.6,79.0,16.7,20.3,0.0,0,0,45,0,4.5,Balanced
+56,10,55,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_9,97,69,96,78,Successful,11,7,4,44.2,24.6,19.6,105.6,0.0,0,0,51,0,-1.8,Momentum Shift
+57,10,47,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,83,19,89,1,Successful,11,7,9,43.6,33.9,12.5,104.5,0.0,0,0,26,0,-8.0,Balanced
+58,10,0,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_7,9,60,34,56,Failed,11,7,10,32.7,65.3,31.3,105.2,0.0,0,0,53,0,7.2,Balanced
+59,10,20,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_8,8,30,23,28,Successful,12,7,2,22.4,10.7,25.8,107.3,0.0,0,0,39,0,-1.1,Momentum Shift
+60,10,57,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_6,47,55,31,50,Successful,13,7,7,27.6,79.5,14.2,27.9,0.0,0,0,77,0,7.4,Chaos
+61,11,31,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,58,32,75,12,Successful,13,7,5,32.1,16.6,21.0,54.6,0.0,0,0,69,0,1.8,Balanced
+62,11,44,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,61,13,51,17,Successful,13,7,10,16.8,70.2,10.5,103.0,0.0,0,0,55,0,-2.1,Control
+63,11,36,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,36,99,25,100,Successful,13,7,4,30.5,62.5,26.9,92.1,0.0,0,0,55,0,3.2,Chaos
+64,11,40,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_11,56,4,68,7,Successful,14,7,7,12.0,14.1,23.5,117.1,0.07,0,0,26,0,0.6,Momentum Shift
+65,11,53,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_8,43,14,47,0,Successful,14,8,4,39.4,72.7,34.5,116.7,0.0,0,0,28,0,6.1,Momentum Shift
+66,11,5,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,47,86,69,82,Successful,15,8,6,9.3,24.1,10.6,108.4,0.0,0,0,58,0,1.2,Chaos
+67,12,41,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_8,52,14,35,0,Successful,15,8,5,44.8,12.5,15.9,73.8,0.0,0,0,14,0,-2.2,Momentum Shift
+68,12,42,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_9,19,53,35,39,Successful,16,8,10,21.3,95.2,10.8,57.1,0.0,0,0,72,0,-1.1,Chaos
+69,12,54,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,82,45,60,50,Failed,16,8,4,43.7,95.0,30.6,29.2,0.0,0,0,45,0,-5.8,Control
+70,12,3,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_4,26,8,49,23,Successful,16,8,10,13.6,87.1,18.2,34.8,0.0,0,0,36,0,8.0,Control
+71,12,17,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_3,22,14,39,0,Successful,17,8,1,19.3,79.1,24.7,21.6,0.0,0,0,26,0,-4.7,Chaos
+72,12,47,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_2,99,46,100,63,Successful,18,8,8,25.2,94.6,11.1,98.3,0.0,0,0,23,0,7.3,Momentum Shift
+73,13,29,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,51,54,69,40,Successful,18,8,8,7.9,9.0,25.2,26.6,0.0,0,0,72,0,-4.5,Momentum Shift
+74,13,24,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,55,12,80,0,Successful,18,8,4,22.2,88.9,20.3,102.7,0.0,0,0,80,0,-2.0,Control
+75,13,20,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,87,60,66,45,Failed,18,8,2,22.3,74.7,19.3,33.0,0.0,0,0,20,0,-8.8,Momentum Shift
+76,13,42,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_6,54,92,32,90,Failed,18,8,6,9.1,51.2,13.9,68.2,0.0,0,0,49,0,6.9,Momentum Shift
+77,13,54,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_2,54,71,78,90,Successful,19,8,10,42.2,83.1,16.7,38.0,0.0,0,0,13,0,4.1,Momentum Shift
+78,13,58,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,84,51,63,40,Successful,19,8,2,34.8,22.3,20.5,54.1,0.0,0,0,13,0,-2.6,Momentum Shift
+79,14,49,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,20,96,34,79,Successful,19,8,5,22.7,43.0,25.2,61.4,0.0,0,0,20,0,-5.7,Control
+80,14,22,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_5,67,85,61,67,Successful,19,8,1,13.2,94.6,29.2,96.4,0.25,0,0,38,0,-4.2,Control
+81,14,0,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,90,29,97,44,Successful,19,9,2,20.9,74.5,20.9,66.0,0.0,0,0,55,0,-8.4,Momentum Shift
+82,14,36,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_7,14,51,0,51,Successful,19,9,6,8.5,84.6,16.1,78.9,0.48,0,0,31,0,0.5,Balanced
+83,14,55,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,9,65,24,52,Successful,19,10,9,12.8,77.8,18.8,115.8,0.0,0,0,77,0,2.9,Chaos
+84,14,15,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,97,97,100,81,Successful,19,10,8,23.6,56.8,24.5,88.1,0.0,0,0,32,0,7.6,Momentum Shift
+85,15,55,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,56,80,50,77,Successful,19,10,6,25.3,31.7,21.3,25.7,0.0,0,0,17,0,6.6,Control
+86,15,41,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_2,59,74,69,56,Successful,19,10,10,31.1,32.8,21.9,35.1,0.0,0,0,67,0,-8.8,Control
+87,15,51,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,82,22,59,17,Successful,19,10,8,26.0,61.4,19.1,111.8,0.0,0,0,66,0,-2.3,Momentum Shift
+88,15,43,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_11,12,71,30,75,Successful,20,10,10,39.9,34.0,24.6,34.1,0.17,0,0,46,0,-3.0,Balanced
+89,15,8,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,42,16,59,29,Successful,20,11,7,25.3,2.8,17.7,115.1,0.0,0,0,21,0,-3.2,Balanced
+90,15,12,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,100,12,100,26,Successful,20,11,1,31.5,87.8,25.5,79.7,0.0,0,0,77,0,-6.9,Chaos
+91,16,53,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_10,56,5,57,8,Successful,20,11,8,29.4,75.5,29.6,43.4,0.0,0,0,40,0,-5.2,Balanced
+92,16,57,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_6,56,59,80,57,Successful,20,11,3,37.7,80.3,13.5,45.0,0.31,0,0,58,0,2.8,Momentum Shift
+93,16,35,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_9,97,20,89,28,Successful,20,12,3,38.2,10.1,32.8,101.7,0.0,0,0,75,0,7.7,Control
+94,16,26,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,10,47,0,28,Successful,21,12,2,38.6,65.3,29.8,33.8,0.0,0,0,50,0,-4.3,Balanced
+95,16,44,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_8,10,2,1,0,Successful,21,12,9,42.6,61.3,20.6,97.6,0.0,0,0,29,0,-5.2,Control
+96,16,3,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_11,14,63,27,77,Successful,21,12,9,28.0,72.1,17.3,20.2,0.0,0,0,12,0,-2.9,Balanced
+97,17,11,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_2,67,69,74,81,Successful,21,12,1,20.6,47.5,25.9,118.1,0.0,0,0,80,0,-4.9,Control
+98,17,22,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,13,98,25,99,Successful,21,12,1,19.1,34.5,26.1,103.0,0.0,0,0,27,0,3.7,Balanced
+99,17,40,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,58,4,51,0,Successful,21,12,4,40.4,32.2,17.8,59.8,0.0,0,0,15,0,6.3,Balanced
+100,17,16,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,99,6,100,7,Successful,21,12,2,37.0,44.3,20.0,64.0,0.0,0,0,44,0,9.1,Momentum Shift
+101,17,11,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,34,10,55,17,Successful,21,12,7,29.1,82.4,23.6,52.1,0.0,0,0,20,0,-8.4,Momentum Shift
+102,17,19,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,57,5,78,7,Successful,21,12,5,30.6,79.4,11.4,87.1,0.0,0,0,65,0,-1.9,Chaos
+103,18,1,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_10,16,8,6,11,Successful,21,12,10,11.1,45.5,19.3,64.4,0.24,0,0,56,0,-8.5,Chaos
+104,18,33,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_6,14,3,36,0,Successful,21,13,2,15.5,26.8,21.2,119.6,0.32,0,0,73,0,-4.3,Balanced
+105,18,12,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_2,56,11,74,11,Failed,21,14,2,27.0,29.7,17.5,35.8,0.0,0,0,54,0,4.2,Chaos
+106,18,50,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,17,30,42,41,Successful,21,14,6,27.2,37.5,30.1,75.2,0.0,0,0,13,0,2.2,Control
+107,18,4,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_8,73,9,56,9,Successful,21,14,8,23.6,52.2,13.2,102.9,0.0,0,0,19,0,1.0,Chaos
+108,18,49,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_7,15,66,0,65,Failed,21,14,3,17.9,71.2,18.7,114.1,0.0,0,0,31,0,7.9,Control
+109,19,16,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,78,68,58,80,Successful,21,14,10,42.7,16.3,26.5,92.1,0.0,0,0,31,0,2.1,Control
+110,19,52,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,73,33,89,26,Successful,21,14,10,30.6,50.3,25.7,49.0,0.0,0,0,63,0,9.1,Balanced
+111,19,15,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_11,88,7,73,15,Successful,21,14,8,23.6,34.7,13.6,106.1,0.0,0,0,63,0,-3.6,Momentum Shift
+112,19,25,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_6,30,59,12,56,Successful,21,14,4,10.6,6.0,33.6,106.4,0.0,0,0,67,0,-1.6,Chaos
+113,19,52,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_10,20,63,27,72,Successful,21,14,5,24.9,9.9,19.8,65.7,0.0,0,0,73,0,-5.2,Momentum Shift
+114,19,3,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_8,86,60,79,74,Failed,21,14,2,22.2,88.4,28.2,96.4,0.0,0,0,11,0,-2.7,Balanced
+115,20,3,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,49,64,52,79,Successful,21,14,10,32.2,12.8,34.4,59.4,0.0,0,0,45,0,5.9,Momentum Shift
+116,20,35,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,64,5,41,0,Successful,21,14,6,37.2,52.4,13.7,109.3,0.0,0,0,27,0,-7.2,Momentum Shift
+117,20,10,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_10,43,64,50,78,Successful,21,14,10,17.0,81.8,19.2,87.4,0.0,0,0,72,0,9.6,Momentum Shift
+118,20,50,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,83,100,100,100,Successful,21,14,1,28.3,17.9,25.7,82.0,0.0,0,0,39,0,6.8,Chaos
+119,20,52,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_1,24,2,27,2,Successful,21,14,3,21.5,21.2,22.5,81.1,0.0,0,0,63,0,-0.6,Control
+120,20,45,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_4,61,67,60,67,Failed,21,14,8,41.5,34.9,18.9,97.2,0.0,0,0,32,0,4.4,Momentum Shift
+121,21,39,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,38,98,31,91,Successful,21,14,6,24.2,56.5,33.4,92.2,0.0,0,0,72,0,-4.2,Balanced
+122,21,57,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,37,5,30,0,Successful,21,14,8,31.2,75.0,15.3,102.8,0.0,0,0,54,0,-4.6,Momentum Shift
+123,21,8,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,67,28,82,22,Successful,22,14,2,21.5,72.0,12.5,97.1,0.0,0,0,16,0,-9.9,Chaos
+124,21,26,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_8,36,41,29,24,Successful,22,14,10,14.3,74.1,31.3,23.7,0.0,0,0,21,0,8.4,Balanced
+125,21,56,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,63,23,85,21,Successful,22,14,1,16.9,60.7,33.2,53.5,0.0,0,0,14,0,-0.9,Balanced
+126,21,56,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_9,14,42,0,51,Successful,23,14,3,5.6,34.4,17.4,87.4,0.0,0,0,42,0,-6.1,Balanced
+127,22,52,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,23,17,28,17,Successful,23,14,1,15.4,24.3,28.8,115.4,0.0,0,0,41,0,-4.0,Control
+128,22,16,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,39,20,39,32,Successful,23,14,2,30.5,94.1,19.2,42.1,0.0,0,0,49,0,9.1,Balanced
+129,22,9,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,60,96,69,89,Successful,23,14,10,39.9,9.1,21.2,90.4,0.0,0,0,41,0,-8.4,Control
+130,22,3,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,21,41,29,49,Successful,23,14,4,33.7,49.4,32.5,64.5,0.0,0,0,24,0,-8.9,Chaos
+131,22,32,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,39,92,15,97,Successful,23,14,1,34.8,58.3,11.1,54.5,0.0,0,0,42,0,-8.7,Control
+132,22,59,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,98,17,100,23,Successful,23,14,7,22.9,91.8,19.4,28.0,0.0,0,0,57,0,9.3,Chaos
+133,23,41,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,67,16,88,10,Successful,23,14,1,44.1,46.8,28.0,62.4,0.0,0,0,10,0,-2.4,Chaos
+134,23,15,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,92,97,74,79,Failed,23,14,10,35.6,88.5,10.4,40.6,0.0,0,0,63,0,-8.0,Control
+135,23,28,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,56,29,65,22,Successful,23,14,3,25.2,29.6,30.4,93.2,0.0,0,0,17,0,-3.6,Momentum Shift
+136,23,15,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_3,52,38,44,21,Successful,23,14,7,27.2,5.6,18.6,84.3,0.0,0,0,32,0,-2.4,Momentum Shift
+137,23,44,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,68,60,58,54,Successful,24,14,3,37.2,91.6,24.1,116.8,0.0,0,0,48,0,1.1,Chaos
+138,23,24,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,57,47,37,61,Successful,24,14,1,15.7,67.7,25.1,107.4,0.0,0,0,34,0,-6.2,Chaos
+139,24,30,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,27,24,49,11,Failed,24,14,4,32.8,70.7,19.9,43.9,0.0,0,0,71,0,-3.6,Momentum Shift
+140,24,24,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,65,63,69,49,Successful,24,14,6,41.6,37.7,20.3,76.3,0.0,0,0,70,0,-5.6,Chaos
+141,24,1,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_10,19,25,15,19,Successful,24,14,10,38.3,50.4,26.4,88.5,0.0,0,0,58,0,-4.9,Balanced
+142,24,46,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_8,45,21,28,35,Successful,24,14,3,41.7,54.7,26.0,25.9,0.0,0,0,72,0,-9.3,Control
+143,24,52,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_1,29,8,49,0,Failed,24,14,4,25.2,37.9,25.4,86.7,0.0,0,0,11,0,2.3,Balanced
+144,24,42,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_1,2,67,23,64,Successful,24,14,5,5.7,81.5,26.9,100.6,0.0,0,0,78,0,8.2,Control
+145,25,58,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,32,45,24,50,Successful,24,14,6,43.4,46.4,16.1,89.7,0.0,0,0,20,0,-4.0,Control
+146,25,41,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_11,48,48,58,58,Successful,24,14,1,33.1,9.2,31.1,84.5,0.0,0,0,17,0,-3.4,Control
+147,25,57,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,88,72,93,69,Failed,24,14,2,32.4,28.8,23.6,85.8,0.0,0,0,15,0,-6.4,Momentum Shift
+148,25,1,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,50,9,44,0,Failed,24,14,10,38.4,39.5,32.4,53.2,0.0,0,0,40,0,5.1,Chaos
+149,25,50,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_2,6,12,8,6,Failed,24,14,6,29.2,61.8,24.9,116.9,0.0,0,0,19,0,-3.5,Momentum Shift
+150,25,50,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,48,55,34,72,Successful,24,14,2,35.9,30.2,16.2,27.4,0.0,0,0,58,0,-4.6,Balanced
+151,26,45,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_3,13,11,0,10,Successful,24,14,6,35.5,11.1,12.2,63.1,0.0,0,0,66,0,1.1,Balanced
+152,26,6,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_6,100,41,99,21,Successful,24,14,7,20.5,9.4,32.5,110.5,0.0,0,0,47,0,9.6,Chaos
+153,26,43,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,18,8,3,15,Successful,24,14,7,17.0,78.5,19.0,114.4,0.0,0,0,45,0,4.4,Balanced
+154,26,38,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,50,42,64,46,Successful,24,14,8,18.4,81.7,31.5,117.4,0.0,0,0,52,0,-7.3,Momentum Shift
+155,26,38,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_4,50,40,43,60,Successful,24,14,10,36.3,33.3,17.0,98.6,0.0,0,0,72,0,-2.7,Chaos
+156,26,37,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_3,93,59,100,52,Successful,24,14,2,37.8,79.8,20.2,69.9,0.48,0,0,66,0,2.7,Chaos
+157,27,16,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_7,76,61,88,66,Successful,24,15,9,41.9,87.1,20.5,23.7,0.0,0,0,78,0,9.4,Control
+158,27,6,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_11,78,5,89,10,Successful,24,15,1,8.9,23.0,28.7,75.8,0.58,0,0,52,0,3.8,Chaos
+159,27,28,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_8,64,19,61,0,Successful,24,16,2,16.8,92.1,12.1,103.1,0.0,0,0,71,0,4.6,Momentum Shift
+160,27,19,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_4,12,56,33,64,Successful,24,16,2,17.0,81.2,12.9,104.9,0.0,0,0,50,0,3.0,Chaos
+161,27,59,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_4,42,71,44,80,Successful,24,16,7,30.2,19.5,26.4,59.6,0.0,0,0,39,0,4.7,Chaos
+162,27,28,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,35,96,55,80,Successful,24,16,9,12.5,33.3,21.4,46.2,0.0,0,0,23,0,7.3,Momentum Shift
+163,28,38,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_7,58,79,44,78,Successful,24,16,3,17.5,24.6,12.9,57.3,0.0,0,0,20,0,-7.2,Balanced
+164,28,26,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,81,68,100,59,Successful,24,16,8,16.6,19.5,31.0,81.9,0.0,0,0,31,0,7.3,Control
+165,28,31,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_7,63,52,81,63,Successful,24,16,8,24.5,9.2,10.8,96.1,0.0,0,0,63,0,-4.2,Momentum Shift
+166,28,14,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_3,98,98,100,100,Successful,25,16,2,27.9,27.5,23.6,119.1,0.0,0,0,75,0,0.8,Control
+167,28,48,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,94,83,100,78,Successful,25,16,1,23.0,35.5,30.4,63.9,0.0,0,0,48,0,9.9,Chaos
+168,28,13,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_10,78,80,80,70,Failed,25,16,1,27.8,53.7,24.9,36.8,0.48,0,0,27,0,9.6,Momentum Shift
+169,29,18,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_9,12,17,35,23,Successful,25,17,5,39.7,13.6,31.7,45.0,0.0,0,0,17,0,4.2,Chaos
+170,29,48,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_7,34,80,35,84,Successful,26,17,2,30.3,88.1,12.3,71.6,0.0,0,0,67,0,-4.4,Momentum Shift
+171,29,29,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_6,93,11,100,20,Failed,26,17,2,36.8,40.4,34.2,102.5,0.0,0,0,55,0,-0.1,Momentum Shift
+172,29,53,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_9,62,100,58,83,Successful,26,17,2,30.0,83.8,10.4,112.9,0.0,0,0,15,0,-6.8,Balanced
+173,29,0,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,16,83,10,73,Successful,26,17,2,31.2,25.8,19.3,110.4,0.0,0,0,45,0,-6.7,Balanced
+174,29,40,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_4,12,0,0,10,Successful,26,17,3,28.7,52.4,21.1,20.8,0.0,0,0,19,0,-3.1,Control
+175,30,55,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_3,11,93,0,79,Successful,26,17,6,40.2,14.6,29.3,95.3,0.0,0,0,50,0,-7.3,Chaos
+176,30,4,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_1,44,92,32,100,Successful,26,17,7,29.6,44.8,15.4,109.7,0.0,0,0,29,0,-7.2,Control
+177,30,37,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,17,31,9,16,Successful,26,17,9,29.0,72.4,17.1,114.1,0.0,0,0,41,0,-9.5,Momentum Shift
+178,30,13,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,82,6,100,1,Successful,27,17,7,9.5,50.5,24.8,72.8,0.0,0,0,73,0,9.6,Momentum Shift
+179,30,59,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_7,46,69,64,60,Successful,27,17,2,5.7,7.7,16.6,24.0,0.0,0,0,70,0,-8.8,Balanced
+180,30,32,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_9,51,10,66,24,Successful,28,17,10,11.1,9.3,12.0,112.1,0.0,0,0,78,0,9.5,Chaos
+181,31,34,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_10,87,82,66,81,Failed,28,17,4,7.3,9.5,20.9,65.3,0.0,0,0,65,0,2.2,Momentum Shift
+182,31,42,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,89,1,74,12,Successful,28,17,9,25.7,82.4,16.5,57.2,0.0,0,0,54,0,5.0,Momentum Shift
+183,31,46,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,67,8,58,24,Successful,28,17,8,23.2,36.7,22.5,76.7,0.0,0,0,19,0,-2.6,Momentum Shift
+184,31,49,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_10,94,65,69,47,Successful,28,17,7,41.8,18.7,34.0,23.5,0.16,0,0,11,0,6.1,Balanced
+185,31,14,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_7,9,73,7,60,Successful,28,18,1,12.2,80.6,34.5,115.4,0.0,0,0,74,0,-8.6,Balanced
+186,31,55,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,1,47,0,45,Successful,29,18,10,14.7,37.5,34.3,119.8,0.0,0,0,48,0,5.5,Chaos
+187,32,9,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,81,88,56,89,Successful,29,18,7,39.0,73.0,12.6,73.0,0.0,0,0,10,0,-5.2,Balanced
+188,32,3,MATCH001,Azure Falcons,Copilot United,Goal,Copilot United,CU_Player_3,29,66,30,69,Successful,29,18,2,25.2,64.1,19.9,79.2,0.59,0,1,95,1,-8.8,Chaos
+189,32,15,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_6,94,41,89,49,Successful,29,19,4,8.0,21.1,29.5,78.5,0.0,0,1,44,0,-6.9,Chaos
+190,32,28,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,98,26,100,25,Successful,30,19,5,39.1,10.0,30.2,50.4,0.0,0,1,69,0,4.1,Control
+191,32,13,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,45,50,52,33,Successful,30,19,5,37.8,18.2,33.8,105.5,0.0,0,1,48,0,1.1,Chaos
+192,32,6,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,99,28,82,20,Successful,30,19,6,32.5,93.8,12.1,78.6,0.0,0,1,61,0,8.3,Control
+193,33,1,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_4,16,11,12,0,Successful,30,19,8,7.0,92.5,20.8,92.4,0.0,0,1,15,0,-0.1,Balanced
+194,33,43,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,35,57,19,39,Successful,31,19,5,25.0,88.4,22.0,28.8,0.0,0,1,41,0,-2.3,Balanced
+195,33,12,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,69,2,68,4,Failed,31,19,9,36.3,35.1,24.1,52.2,0.0,0,1,71,0,-4.6,Control
+196,33,20,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,7,60,15,62,Successful,31,19,3,9.0,66.0,16.7,101.6,0.0,0,1,39,0,8.3,Control
+197,33,48,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_4,49,45,35,36,Failed,32,19,10,17.7,74.1,19.0,79.2,0.0,0,1,40,0,4.1,Momentum Shift
+198,33,36,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_10,63,69,57,60,Failed,32,19,1,8.6,24.0,15.5,72.6,0.0,0,1,72,0,-10.0,Chaos
+199,34,51,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_3,41,7,17,0,Failed,33,19,2,38.9,86.2,34.0,57.4,0.0,0,1,28,0,8.8,Balanced
+200,34,37,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,93,55,100,75,Failed,34,19,6,12.0,96.9,27.3,112.9,0.0,0,1,72,0,5.7,Chaos
+201,34,42,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,37,16,23,0,Successful,34,19,10,6.3,60.6,33.0,116.8,0.0,0,1,60,0,-5.6,Control
+202,34,59,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_6,40,21,55,6,Successful,34,19,8,5.5,21.8,27.3,55.0,0.0,0,1,52,0,5.7,Control
+203,34,3,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_7,63,48,60,62,Failed,34,19,2,38.2,79.1,24.5,95.8,0.0,0,1,58,0,-5.5,Balanced
+204,34,4,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,13,9,9,0,Successful,35,19,3,34.3,55.2,32.5,29.3,0.0,0,1,58,0,1.9,Balanced
+205,35,45,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,20,6,1,7,Failed,35,19,4,21.4,55.9,33.1,74.0,0.0,0,1,36,0,3.2,Momentum Shift
+206,35,15,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_7,19,6,17,0,Failed,35,19,2,16.8,66.5,25.0,40.0,0.0,0,1,64,0,-9.5,Chaos
+207,35,40,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_2,100,50,100,61,Successful,35,19,2,30.7,39.4,19.3,58.1,0.0,0,1,43,0,-6.3,Control
+208,35,16,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,7,19,30,5,Successful,35,19,6,37.3,42.0,28.9,42.8,0.0,0,1,20,0,-8.8,Balanced
+209,35,52,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_9,73,30,78,29,Failed,35,19,1,25.1,90.1,30.0,87.8,0.25,0,1,20,0,2.4,Control
+210,35,48,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_3,16,5,18,0,Successful,35,20,4,44.9,63.1,30.9,45.8,0.0,0,1,65,0,8.2,Control
+211,36,5,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_7,66,58,41,77,Failed,36,20,7,9.5,15.8,24.2,78.3,0.0,0,1,76,0,9.3,Control
+212,36,59,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_2,44,52,35,56,Failed,36,20,10,29.4,4.7,16.9,34.4,0.0,0,1,72,0,2.2,Balanced
+213,36,2,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_6,60,34,58,15,Successful,36,20,5,38.7,86.0,27.1,117.2,0.49,0,1,53,0,-5.4,Momentum Shift
+214,36,47,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,82,11,69,19,Successful,36,21,7,34.6,76.2,31.7,102.1,0.0,0,1,37,0,0.3,Chaos
+215,36,4,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_9,67,72,43,63,Successful,36,21,4,38.5,25.7,21.4,111.8,0.0,0,1,34,0,4.1,Momentum Shift
+216,36,23,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,87,3,77,6,Failed,36,21,10,22.8,96.1,21.9,75.1,0.0,0,1,72,0,-3.1,Momentum Shift
+217,37,47,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,20,73,44,66,Successful,36,21,4,32.1,27.6,20.2,22.0,0.0,0,1,38,0,5.6,Control
+218,37,30,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,28,32,41,31,Successful,36,21,7,40.8,85.3,21.5,41.8,0.0,0,1,45,0,-4.0,Balanced
+219,37,37,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_9,47,71,63,89,Failed,36,21,5,32.4,48.7,18.4,47.6,0.0,0,1,46,0,-3.5,Momentum Shift
+220,37,16,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,97,30,75,48,Successful,37,21,6,32.2,72.4,26.4,119.7,0.0,0,1,61,0,-4.8,Balanced
+221,37,25,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_1,24,43,45,37,Failed,37,21,8,41.3,67.5,22.7,104.5,0.0,0,1,78,0,6.8,Chaos
+222,37,18,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_3,71,97,57,98,Successful,37,21,4,19.2,74.7,17.7,98.8,0.0,0,1,21,0,-3.4,Momentum Shift
+223,38,37,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_2,74,74,88,58,Failed,37,21,4,25.0,86.9,19.5,49.8,0.0,0,1,70,0,-8.9,Chaos
+224,38,8,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_6,58,18,53,9,Successful,37,21,8,18.3,98.7,17.8,25.8,0.0,0,1,20,0,-1.0,Chaos
+225,38,48,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_10,97,99,77,87,Successful,37,21,7,21.1,96.6,19.6,23.8,0.0,0,1,65,0,-6.0,Momentum Shift
+226,38,0,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,80,93,70,87,Successful,37,21,5,10.2,39.0,24.7,36.7,0.0,0,1,54,0,6.5,Momentum Shift
+227,38,18,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_9,87,17,83,28,Successful,37,21,4,11.6,90.8,30.3,21.9,0.0,0,1,55,0,-5.5,Chaos
+228,38,13,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_10,91,83,100,65,Successful,37,21,5,35.8,62.7,24.8,24.8,0.0,0,1,58,0,-7.8,Control
+229,39,3,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_7,32,60,51,49,Successful,37,21,1,17.0,66.5,26.6,47.0,0.0,0,1,36,0,2.1,Chaos
+230,39,26,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_2,36,14,61,0,Successful,37,21,4,29.4,78.0,30.8,117.3,0.0,0,1,73,0,-2.8,Balanced
+231,39,18,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_9,61,42,51,22,Successful,37,21,2,41.3,83.7,26.7,34.9,0.0,0,1,11,0,-8.2,Control
+232,39,46,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_5,37,33,41,16,Successful,37,21,5,19.4,68.0,20.6,31.6,0.49,0,1,22,0,7.0,Control
+233,39,0,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_11,56,79,48,64,Successful,37,22,7,21.0,46.2,30.9,89.0,0.49,0,1,57,0,-0.4,Balanced
+234,39,41,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,7,20,0,26,Successful,37,23,10,32.1,18.9,19.5,55.9,0.0,0,1,71,0,-9.4,Chaos
+235,40,30,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_2,8,33,24,33,Successful,37,23,9,35.7,58.1,24.1,117.8,0.0,0,1,11,0,3.4,Momentum Shift
+236,40,33,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,31,61,28,65,Successful,38,23,9,40.7,61.7,10.3,113.4,0.0,0,1,29,0,0.1,Balanced
+237,40,54,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,30,42,22,25,Successful,38,23,4,27.0,38.5,30.4,27.9,0.0,0,1,74,0,-1.1,Balanced
+238,40,5,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,95,83,71,69,Failed,38,23,7,6.4,55.4,30.6,99.2,0.0,0,1,61,0,9.3,Momentum Shift
+239,40,56,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_4,43,46,21,40,Successful,38,23,10,23.9,66.1,27.9,31.4,0.21,0,1,68,0,5.2,Chaos
+240,40,0,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_11,66,47,85,33,Successful,38,24,3,24.7,82.4,28.6,60.9,0.0,0,1,15,0,-4.9,Chaos
+241,41,12,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,24,91,20,77,Failed,39,24,1,42.1,83.9,24.7,97.2,0.0,0,1,63,0,-1.0,Chaos
+242,41,31,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_1,74,61,81,52,Successful,39,24,3,9.1,66.1,25.2,52.2,0.0,0,1,32,0,7.6,Balanced
+243,41,38,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,37,57,20,45,Failed,39,24,10,33.0,75.1,17.5,90.1,0.0,0,1,62,0,7.2,Chaos
+244,41,12,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_5,16,90,32,81,Failed,39,24,2,35.4,56.7,24.6,114.3,0.33,0,1,74,0,4.2,Momentum Shift
+245,41,56,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_1,18,6,35,0,Successful,39,25,5,35.0,16.9,17.2,45.1,0.0,0,1,35,0,6.8,Momentum Shift
+246,41,13,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,78,86,100,100,Successful,39,25,9,20.6,51.6,29.9,89.6,0.0,0,1,38,0,3.9,Control
+247,42,59,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_7,40,70,18,50,Failed,39,25,4,29.8,78.3,31.8,103.0,0.0,0,1,42,0,8.2,Momentum Shift
+248,42,48,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,24,37,27,28,Successful,40,25,3,43.5,73.8,13.0,24.1,0.0,0,1,19,0,-4.4,Momentum Shift
+249,42,8,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,19,5,3,5,Successful,40,25,10,38.7,30.8,29.7,75.0,0.0,0,1,16,0,-8.5,Momentum Shift
+250,42,33,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_3,20,53,29,67,Successful,40,25,2,19.0,88.5,26.6,53.1,0.0,0,1,61,0,-4.1,Balanced
+251,42,35,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,57,30,73,49,Successful,40,25,1,32.3,32.8,32.9,114.5,0.0,0,1,41,0,-2.3,Momentum Shift
+252,42,1,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_6,62,5,55,0,Successful,40,25,9,8.3,10.5,34.3,97.3,0.0,0,1,51,0,0.7,Control
+253,43,13,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_4,13,26,22,33,Successful,40,25,3,6.0,72.0,10.9,27.3,0.0,0,1,19,0,-6.4,Momentum Shift
+254,43,35,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_4,57,80,57,87,Successful,41,25,1,20.6,12.7,10.1,92.0,0.0,0,1,50,0,-8.7,Control
+255,43,44,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,100,87,94,100,Successful,42,25,5,35.6,44.3,19.9,86.1,0.0,0,1,21,0,-0.5,Chaos
+256,43,8,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,38,86,63,89,Successful,43,25,9,40.0,15.0,11.0,77.3,0.0,0,1,11,0,-2.1,Control
+257,43,19,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,65,18,50,9,Failed,43,25,10,38.4,20.2,14.5,100.0,0.0,0,1,38,0,7.0,Balanced
+258,43,41,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_5,25,92,37,100,Successful,43,25,4,9.0,62.3,32.5,51.8,0.23,0,1,52,0,-1.0,Momentum Shift
+259,44,44,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_10,54,21,29,21,Successful,43,26,4,33.5,64.4,16.9,55.9,0.0,0,1,41,0,3.6,Momentum Shift
+260,44,56,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,70,13,56,31,Successful,43,26,5,39.3,14.9,23.5,46.3,0.0,0,1,20,0,7.7,Control
+261,44,46,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_1,74,74,74,91,Successful,43,26,1,27.1,54.8,35.0,67.2,0.0,0,1,37,0,5.5,Momentum Shift
+262,44,25,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_10,59,64,66,49,Successful,43,26,6,25.1,66.6,31.2,100.7,0.0,0,1,60,0,2.3,Chaos
+263,44,48,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,72,84,56,94,Successful,43,26,1,13.8,49.3,11.6,56.9,0.0,0,1,55,0,-9.1,Chaos
+264,44,33,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,5,5,21,5,Failed,43,26,9,30.3,28.1,28.5,77.9,0.0,0,1,23,0,1.4,Balanced
+265,45,41,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_10,66,32,65,26,Failed,43,26,6,24.5,48.7,25.1,70.2,0.26,0,1,76,0,-7.2,Chaos
+266,45,14,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,20,46,33,33,Successful,43,27,7,37.4,72.3,22.0,67.9,0.0,0,1,39,0,-5.8,Chaos
+267,45,41,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,75,20,58,40,Successful,43,27,1,40.6,15.5,14.2,112.2,0.0,0,1,75,0,0.3,Balanced
+268,45,38,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,84,36,64,29,Successful,43,27,10,44.7,86.9,14.3,103.0,0.0,0,1,67,0,2.0,Chaos
+269,45,39,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,58,76,70,60,Successful,43,27,7,20.4,11.7,15.1,106.0,0.0,0,1,39,0,0.1,Balanced
+270,45,52,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,76,4,100,18,Failed,43,27,2,8.7,66.3,32.5,73.9,0.0,0,1,74,0,-10.0,Balanced
+271,46,33,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_1,61,98,60,100,Successful,43,27,4,41.4,9.3,25.0,74.4,0.27,0,1,22,0,-4.8,Control
+272,46,45,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_1,0,48,16,41,Successful,43,28,7,19.5,16.3,26.3,45.4,0.0,0,1,50,0,7.1,Balanced
+273,46,36,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_5,26,52,36,67,Successful,43,28,3,19.8,55.9,16.3,50.7,0.0,0,1,71,0,-3.1,Balanced
+274,46,47,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,100,89,85,75,Successful,44,28,9,21.0,34.5,23.8,89.7,0.0,0,1,37,0,4.1,Chaos
+275,46,24,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_1,60,76,62,61,Failed,44,28,5,13.9,8.9,10.9,58.4,0.0,0,1,18,0,9.7,Momentum Shift
+276,46,45,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,81,63,84,43,Failed,44,28,9,16.4,4.3,25.0,71.6,0.0,0,1,35,0,-5.4,Chaos
+277,47,43,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_4,11,35,35,40,Failed,45,28,4,25.7,74.0,11.7,29.0,0.41,0,1,55,0,-4.3,Momentum Shift
+278,47,22,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,58,51,69,31,Failed,45,29,3,21.3,11.5,11.8,49.4,0.0,0,1,43,0,8.9,Momentum Shift
+279,47,56,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,48,72,53,67,Successful,45,29,8,32.3,89.8,31.6,68.2,0.0,0,1,53,0,-4.8,Balanced
+280,47,40,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_4,40,52,37,65,Successful,45,29,4,16.5,40.5,28.7,54.2,0.03,0,1,78,0,1.1,Chaos
+281,47,30,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_4,95,87,82,98,Successful,45,30,4,34.4,87.4,15.2,40.3,0.0,0,1,35,0,-5.0,Momentum Shift
+282,47,9,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_2,84,63,98,43,Successful,46,30,1,38.9,37.7,17.9,109.8,0.0,0,1,79,0,7.6,Momentum Shift
+283,48,31,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,73,16,51,29,Successful,47,30,8,42.6,4.2,18.7,106.0,0.0,0,1,64,0,5.5,Balanced
+284,48,7,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,86,26,85,43,Successful,47,30,6,19.5,86.3,14.7,46.3,0.0,0,1,22,0,-4.6,Momentum Shift
+285,48,23,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,47,46,47,43,Successful,47,30,3,27.9,97.9,27.2,101.4,0.0,0,1,67,0,4.4,Chaos
+286,48,35,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,94,19,99,0,Successful,47,30,7,25.0,99.6,31.2,71.7,0.0,0,1,32,0,4.4,Balanced
+287,48,19,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,20,7,8,3,Successful,47,30,2,23.0,34.1,19.0,76.0,0.0,0,1,70,0,8.6,Momentum Shift
+288,48,22,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,77,25,88,41,Successful,47,30,3,44.2,29.2,18.1,71.0,0.0,0,1,78,0,5.5,Balanced
+289,49,56,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,18,21,33,22,Successful,47,30,10,27.9,85.0,11.8,36.2,0.0,0,1,63,0,-5.4,Momentum Shift
+290,49,41,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_5,56,99,54,100,Successful,47,30,8,21.6,19.2,10.6,92.8,0.0,0,1,76,0,3.2,Control
+291,49,13,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,60,70,38,51,Failed,47,30,9,35.6,9.2,16.6,35.5,0.0,0,1,60,0,3.1,Balanced
+292,49,19,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_5,67,21,43,3,Successful,47,30,6,39.6,47.3,31.8,113.5,0.0,0,1,55,0,1.0,Chaos
+293,49,44,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_10,81,72,83,85,Successful,47,30,5,41.4,48.7,15.7,29.0,0.0,0,1,78,0,-3.8,Balanced
+294,49,16,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,17,44,10,54,Successful,47,30,1,32.5,49.7,28.9,50.0,0.0,0,1,78,0,5.3,Momentum Shift
+295,50,38,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_1,71,55,71,50,Successful,47,30,7,38.1,22.8,12.0,82.5,0.0,0,1,30,0,0.3,Momentum Shift
+296,50,18,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_9,8,23,0,21,Successful,47,30,8,29.7,27.9,25.6,38.8,0.0,0,1,24,0,-9.6,Control
+297,50,34,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,56,93,31,87,Successful,47,30,3,5.6,22.5,20.5,98.6,0.0,0,1,21,0,-0.0,Momentum Shift
+298,50,29,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,18,7,10,12,Failed,47,30,9,23.8,20.0,31.0,101.7,0.0,0,1,19,0,6.6,Control
+299,50,49,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_7,94,4,81,13,Successful,47,30,9,31.6,21.6,19.7,116.1,0.0,0,1,22,0,8.7,Chaos
+300,50,40,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_9,81,38,68,41,Successful,47,30,4,43.9,24.4,20.9,21.5,0.0,0,1,16,0,5.9,Control
+301,51,25,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,88,60,100,78,Successful,47,30,6,35.8,25.6,22.5,88.6,0.0,0,1,29,0,-3.2,Control
+302,51,3,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_3,16,62,5,62,Successful,48,30,4,5.9,38.4,28.1,45.1,0.49,0,1,54,0,-9.2,Balanced
+303,51,35,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,44,41,65,50,Successful,48,31,10,41.6,55.9,11.7,35.5,0.0,0,1,45,0,-4.1,Momentum Shift
+304,51,34,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_1,93,23,69,42,Successful,48,31,10,14.6,72.4,26.5,73.9,0.0,0,1,56,0,-2.3,Balanced
+305,51,49,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,41,14,22,27,Successful,48,31,1,38.4,13.8,31.8,40.2,0.0,0,1,18,0,-0.3,Control
+306,51,2,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_7,89,75,80,58,Successful,48,31,1,42.2,21.7,22.3,109.0,0.15,0,1,56,0,-8.4,Control
+307,52,23,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_7,7,78,0,91,Successful,48,32,2,38.4,8.7,15.4,71.9,0.0,0,1,15,0,-8.0,Chaos
+308,52,34,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_4,80,22,90,37,Successful,48,32,2,35.7,58.1,26.9,90.3,0.0,0,1,63,0,-1.5,Control
+309,52,10,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_9,20,68,33,76,Successful,48,32,6,27.0,99.7,31.1,61.2,0.0,0,1,55,0,2.7,Momentum Shift
+310,52,38,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,95,32,93,40,Successful,48,32,7,5.0,4.4,17.1,21.6,0.0,0,1,67,0,-7.3,Momentum Shift
+311,52,0,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,98,88,90,100,Successful,48,32,9,27.8,57.6,12.4,66.0,0.0,0,1,75,0,-6.9,Momentum Shift
+312,52,23,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,11,73,11,89,Successful,48,32,2,33.9,79.5,14.3,102.6,0.0,0,1,37,0,3.8,Control
+313,53,38,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_1,10,99,0,100,Successful,48,32,7,21.7,86.9,31.7,42.7,0.0,0,1,54,0,3.1,Control
+314,53,40,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,40,69,51,58,Successful,48,32,9,32.9,16.2,26.8,119.7,0.0,0,1,51,0,9.4,Control
+315,53,14,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,60,73,82,56,Successful,48,32,7,15.5,40.5,20.9,89.8,0.0,0,1,80,0,5.2,Balanced
+316,53,35,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_7,78,94,86,89,Successful,48,32,6,32.4,58.0,12.8,61.4,0.06,0,1,41,0,-2.7,Chaos
+317,53,20,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,44,78,47,97,Successful,48,33,8,6.8,82.0,15.0,57.4,0.0,0,1,28,0,5.2,Control
+318,53,7,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_4,36,1,32,0,Failed,48,33,8,23.8,33.9,28.5,41.2,0.0,0,1,49,0,0.9,Momentum Shift
+319,54,35,MATCH001,Azure Falcons,Copilot United,Goal,Azure Falcons,AF_Player_3,48,74,65,87,Successful,49,33,4,36.6,62.2,11.3,85.5,0.17,1,1,95,1,-9.8,Balanced
+320,54,42,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,37,83,36,77,Successful,49,34,9,44.1,10.9,17.9,106.7,0.0,1,1,58,0,0.6,Chaos
+321,54,12,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_8,5,31,13,30,Successful,49,34,8,20.7,16.5,18.7,55.2,0.0,1,1,52,0,2.5,Chaos
+322,54,32,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_1,3,71,0,65,Failed,49,34,6,40.9,66.0,12.2,58.2,0.0,1,1,29,0,9.2,Chaos
+323,54,26,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_3,77,42,80,56,Successful,49,34,4,31.1,58.5,27.1,40.2,0.0,1,1,26,0,-7.2,Chaos
+324,54,27,MATCH001,Azure Falcons,Copilot United,Goal,Copilot United,CU_Player_3,20,40,0,55,Successful,49,34,6,38.6,15.4,10.7,51.9,0.57,1,2,95,1,9.5,Balanced
+325,55,19,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_11,99,24,80,12,Successful,49,35,1,35.5,61.6,16.7,76.7,0.0,1,2,33,0,-5.4,Chaos
+326,55,14,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,17,64,30,74,Successful,50,35,3,39.1,49.7,13.4,39.3,0.0,1,2,57,0,-9.4,Control
+327,55,59,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,25,96,13,80,Successful,50,35,8,39.7,49.5,18.1,65.8,0.0,1,2,32,0,-5.1,Balanced
+328,55,49,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_7,95,73,100,87,Successful,50,35,1,25.8,45.7,30.7,24.2,0.0,1,2,77,0,9.9,Balanced
+329,55,47,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_7,6,24,0,32,Successful,50,35,5,35.9,29.3,14.2,49.4,0.0,1,2,60,0,8.4,Chaos
+330,55,29,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,23,99,35,100,Successful,50,35,7,21.5,45.6,14.5,79.0,0.0,1,2,27,0,4.3,Chaos
+331,56,56,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,91,20,100,7,Successful,50,35,2,33.2,63.8,12.1,90.7,0.0,1,2,21,0,4.5,Chaos
+332,56,24,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_1,72,84,56,74,Failed,50,35,3,35.8,6.1,17.7,93.0,0.0,1,2,28,0,9.2,Momentum Shift
+333,56,40,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_3,97,32,72,41,Successful,50,35,8,26.7,1.6,32.1,43.8,0.0,1,2,73,0,1.8,Balanced
+334,56,29,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_2,70,35,84,55,Successful,51,35,1,12.4,6.5,18.7,34.5,0.0,1,2,36,0,-9.4,Momentum Shift
+335,56,21,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,20,86,13,100,Failed,51,35,8,35.0,36.7,10.9,96.9,0.0,1,2,32,0,-3.5,Balanced
+336,56,52,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_7,60,17,42,14,Successful,51,35,9,21.6,21.8,15.2,25.8,0.0,1,2,52,0,1.4,Control
+337,57,30,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_10,36,54,49,54,Failed,51,35,9,28.0,62.7,33.2,81.4,0.0,1,2,43,0,-0.1,Balanced
+338,57,31,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,24,0,6,0,Successful,52,35,2,34.5,21.5,25.4,61.5,0.0,1,2,69,0,-9.1,Momentum Shift
+339,57,35,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,36,32,61,16,Successful,52,35,5,25.3,33.1,10.2,88.6,0.0,1,2,49,0,-3.2,Control
+340,57,53,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_6,61,60,38,48,Failed,52,35,3,30.1,89.3,23.4,53.5,0.0,1,2,71,0,5.7,Balanced
+341,57,59,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,40,71,49,52,Successful,52,35,10,32.4,80.2,32.2,55.4,0.0,1,2,36,0,9.4,Momentum Shift
+342,57,53,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_7,73,77,72,68,Failed,52,35,5,33.2,32.1,10.8,61.4,0.0,1,2,24,0,-0.1,Chaos
+343,58,23,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,14,47,39,29,Successful,52,35,2,22.8,3.5,22.1,70.0,0.0,1,2,35,0,-6.2,Balanced
+344,58,46,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_5,12,66,30,54,Successful,52,35,1,23.4,71.7,23.1,20.4,0.0,1,2,36,0,8.6,Control
+345,58,21,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,95,39,71,55,Successful,52,35,4,17.8,20.1,16.9,51.9,0.0,1,2,49,0,-1.2,Control
+346,58,17,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,71,65,52,58,Failed,52,35,6,27.0,27.8,33.6,100.4,0.0,1,2,79,0,1.5,Chaos
+347,58,4,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_6,3,60,21,43,Successful,52,35,7,7.2,43.2,14.5,79.6,0.0,1,2,23,0,1.9,Balanced
+348,58,39,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_6,85,68,65,77,Successful,52,35,2,37.5,92.0,21.7,65.6,0.0,1,2,26,0,3.7,Balanced
+349,59,30,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,33,46,33,37,Failed,52,35,6,23.1,4.0,21.9,55.1,0.0,1,2,52,0,-0.8,Chaos
+350,59,18,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_10,51,91,76,77,Successful,52,35,9,31.0,79.5,23.3,60.1,0.0,1,2,51,0,-1.7,Chaos
+351,59,35,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,88,75,90,82,Successful,52,35,9,32.8,18.1,26.7,93.9,0.0,1,2,53,0,4.2,Balanced
+352,59,7,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,56,22,50,27,Successful,52,35,10,9.3,81.6,29.3,57.9,0.0,1,2,18,0,-0.1,Control
+353,59,5,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_3,81,0,100,0,Failed,52,35,8,26.3,39.6,24.4,39.6,0.0,1,2,29,0,3.6,Momentum Shift
+354,59,19,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,55,91,52,76,Failed,53,35,10,44.5,41.0,13.2,49.4,0.0,1,2,11,0,-2.6,Control
+355,60,0,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,3,30,5,47,Successful,53,35,6,33.5,41.2,20.9,41.1,0.0,1,2,60,0,-6.5,Chaos
+356,60,12,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_6,85,16,68,0,Successful,53,35,1,10.8,88.6,26.4,117.5,0.0,1,2,19,0,-7.3,Chaos
+357,60,41,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_8,54,79,40,88,Successful,53,35,7,27.1,45.6,18.9,38.6,0.0,1,2,75,0,2.1,Balanced
+358,60,54,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_9,73,46,50,28,Failed,54,35,6,9.5,48.7,27.3,34.2,0.0,1,2,71,0,4.6,Momentum Shift
+359,60,29,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_9,60,80,82,64,Successful,54,35,10,17.5,6.2,18.6,97.9,0.0,1,2,79,0,-0.6,Balanced
+360,60,36,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,37,37,22,19,Failed,55,35,10,15.4,63.3,24.5,77.3,0.0,1,2,48,0,3.1,Momentum Shift
+361,61,51,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,64,9,89,6,Successful,55,35,3,29.6,28.2,16.4,94.1,0.0,1,2,42,0,2.1,Chaos
+362,61,42,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,62,23,70,5,Successful,55,35,2,43.7,60.0,30.5,103.8,0.0,1,2,53,0,5.1,Balanced
+363,61,49,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_11,26,73,47,75,Successful,55,35,5,35.2,12.5,14.2,59.9,0.0,1,2,16,0,-4.0,Chaos
+364,61,24,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_7,55,1,48,9,Successful,55,35,6,43.5,68.6,11.0,111.8,0.0,1,2,58,0,2.7,Balanced
+365,61,39,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,12,32,28,49,Successful,55,35,8,35.9,75.2,28.4,78.9,0.0,1,2,60,0,-6.1,Momentum Shift
+366,61,43,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,1,8,0,14,Successful,55,35,9,9.2,45.1,15.5,48.3,0.0,1,2,22,0,-6.1,Control
+367,62,39,MATCH001,Azure Falcons,Copilot United,Goal,Azure Falcons,AF_Player_10,76,81,58,68,Successful,55,35,10,37.1,19.3,12.8,38.4,0.52,2,2,95,1,-4.1,Control
+368,62,40,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_5,85,98,100,98,Successful,55,36,3,36.2,28.5,11.6,58.9,0.0,2,2,42,0,9.9,Momentum Shift
+369,62,52,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,25,78,25,69,Failed,55,36,2,10.8,77.1,15.5,84.3,0.0,2,2,72,0,8.3,Momentum Shift
+370,62,6,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_2,57,2,63,0,Successful,55,36,1,31.6,27.4,27.5,110.5,0.0,2,2,10,0,1.5,Balanced
+371,62,30,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_2,88,99,93,86,Successful,55,36,6,18.3,31.0,11.4,119.7,0.0,2,2,78,0,2.9,Momentum Shift
+372,62,34,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,98,37,100,29,Successful,55,36,9,6.6,39.0,14.8,89.6,0.0,2,2,32,0,7.9,Momentum Shift
+373,63,31,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_11,4,24,0,41,Successful,55,36,8,20.6,79.5,26.1,70.0,0.0,2,2,40,0,9.3,Balanced
+374,63,1,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,51,15,39,28,Successful,55,36,9,11.0,58.4,33.1,23.7,0.0,2,2,68,0,-7.2,Control
+375,63,30,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,16,1,2,21,Successful,55,36,5,37.8,10.6,25.3,103.5,0.0,2,2,16,0,-8.7,Control
+376,63,7,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,54,43,76,48,Successful,55,36,2,44.0,58.0,13.4,103.6,0.0,2,2,51,0,5.9,Control
+377,63,37,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,53,21,72,24,Successful,55,36,3,22.5,92.6,11.0,30.0,0.0,2,2,80,0,6.9,Balanced
+378,63,49,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,11,90,27,100,Successful,55,36,7,32.7,79.4,21.9,32.7,0.0,2,2,46,0,-7.1,Momentum Shift
+379,64,33,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_4,4,76,0,87,Successful,55,36,5,18.9,1.5,15.9,31.8,0.0,2,2,21,0,0.6,Control
+380,64,39,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_9,80,84,68,81,Successful,56,36,4,9.5,15.8,31.1,111.1,0.0,2,2,16,0,-0.0,Chaos
+381,64,42,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_1,55,32,51,51,Successful,56,36,9,12.0,78.8,22.1,31.6,0.05,2,2,68,0,7.9,Balanced
+382,64,37,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,41,29,65,16,Successful,56,37,4,8.9,74.0,31.7,57.6,0.0,2,2,51,0,-5.6,Balanced
+383,64,37,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,58,22,57,25,Failed,56,37,8,33.8,63.6,34.4,40.2,0.0,2,2,27,0,-7.5,Control
+384,64,17,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_8,43,28,36,46,Successful,56,37,10,41.2,58.2,23.8,43.0,0.0,2,2,30,0,-1.8,Balanced
+385,65,55,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_10,1,93,3,88,Successful,56,37,6,22.4,23.0,33.2,114.6,0.0,2,2,41,0,8.3,Control
+386,65,26,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,64,4,66,17,Successful,56,37,8,37.4,70.0,12.4,69.5,0.0,2,2,60,0,-8.3,Control
+387,65,44,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,82,11,58,21,Successful,57,37,3,33.1,85.9,28.7,22.4,0.0,2,2,49,0,-0.9,Chaos
+388,65,55,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_3,59,90,74,70,Successful,57,37,7,40.7,34.0,10.8,62.6,0.0,2,2,19,0,-4.6,Chaos
+389,65,50,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_10,7,65,25,68,Successful,57,37,2,20.3,47.1,11.0,56.6,0.0,2,2,16,0,3.0,Control
+390,65,35,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,69,14,85,24,Successful,58,37,4,17.8,89.9,22.6,62.3,0.0,2,2,36,0,-8.9,Momentum Shift
+391,66,22,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_9,90,68,100,82,Successful,58,37,8,29.8,80.2,33.6,100.9,0.0,2,2,47,0,8.8,Control
+392,66,12,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,22,36,1,22,Successful,58,37,5,9.5,15.6,13.8,40.4,0.0,2,2,31,0,9.0,Control
+393,66,18,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_11,44,53,47,34,Successful,58,37,4,7.5,87.3,15.8,114.7,0.0,2,2,47,0,2.9,Balanced
+394,66,37,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_11,85,89,93,100,Successful,58,37,8,17.2,14.1,29.7,37.2,0.0,2,2,66,0,-4.8,Balanced
+395,66,23,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,21,79,6,93,Successful,58,37,3,43.9,84.1,27.3,86.6,0.0,2,2,46,0,-6.9,Chaos
+396,66,7,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_6,47,23,35,38,Successful,58,37,6,44.1,15.6,21.2,117.5,0.0,2,2,14,0,0.7,Control
+397,67,58,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_8,40,19,15,33,Failed,58,37,6,30.9,30.3,32.4,117.0,0.0,2,2,74,0,5.1,Chaos
+398,67,51,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,61,5,44,20,Successful,58,37,5,6.0,62.1,15.5,55.7,0.0,2,2,24,0,-3.5,Chaos
+399,67,37,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,57,86,74,71,Successful,58,37,7,12.8,32.5,25.1,114.3,0.0,2,2,75,0,8.2,Momentum Shift
+400,67,25,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,36,44,33,43,Successful,58,37,9,8.5,73.1,21.1,119.3,0.0,2,2,67,0,6.1,Momentum Shift
+401,67,10,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_7,75,76,55,65,Successful,58,37,5,24.0,86.9,34.7,26.6,0.0,2,2,36,0,9.2,Balanced
+402,67,5,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_11,71,59,91,75,Successful,58,37,4,12.4,38.8,23.8,24.2,0.0,2,2,27,0,6.5,Momentum Shift
+403,68,31,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,19,33,13,53,Successful,59,37,2,31.2,89.4,20.4,69.2,0.0,2,2,70,0,3.8,Chaos
+404,68,1,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_5,76,95,74,100,Failed,59,37,10,22.4,26.5,27.1,117.4,0.0,2,2,71,0,6.4,Momentum Shift
+405,68,32,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_1,7,18,2,27,Successful,59,37,6,11.5,28.0,20.5,111.2,0.0,2,2,27,0,-2.9,Momentum Shift
+406,68,18,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_2,23,97,4,100,Successful,59,37,9,17.9,32.3,31.1,100.0,0.0,2,2,31,0,-4.6,Momentum Shift
+407,68,6,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_6,66,36,64,47,Successful,59,37,6,41.8,17.1,15.4,70.3,0.0,2,2,62,0,6.6,Control
+408,68,26,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,2,61,0,60,Successful,59,37,3,37.7,89.1,24.9,96.4,0.0,2,2,56,0,-3.2,Momentum Shift
+409,69,1,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,18,88,7,87,Failed,59,37,4,10.2,8.8,27.3,98.4,0.0,2,2,26,0,-8.4,Balanced
+410,69,48,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,65,75,43,85,Successful,59,37,5,6.7,30.9,10.3,29.7,0.0,2,2,25,0,-7.5,Chaos
+411,69,37,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_3,18,95,10,100,Successful,59,37,10,14.7,57.5,12.5,77.8,0.22,2,2,54,0,-9.7,Chaos
+412,69,45,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,0,92,0,85,Successful,59,38,8,19.7,59.3,21.0,115.8,0.0,2,2,74,0,-6.4,Momentum Shift
+413,69,24,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,40,15,44,2,Successful,59,38,3,24.8,36.8,17.2,92.2,0.0,2,2,76,0,-8.4,Balanced
+414,69,7,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_8,56,28,66,34,Successful,59,38,7,12.6,7.9,31.0,67.6,0.0,2,2,47,0,3.6,Chaos
+415,70,0,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_8,66,84,84,69,Successful,59,38,10,44.1,74.4,32.3,36.9,0.1,2,2,25,0,-2.7,Chaos
+416,70,21,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,92,63,84,80,Failed,59,39,7,19.2,67.0,33.8,118.8,0.0,2,2,44,0,0.2,Chaos
+417,70,49,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,80,17,56,3,Successful,59,39,2,24.9,3.6,14.5,80.5,0.0,2,2,16,0,-3.5,Momentum Shift
+418,70,39,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_2,63,59,50,57,Successful,59,39,6,37.4,54.5,10.4,96.4,0.3,2,2,73,0,9.8,Control
+419,70,24,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_7,22,71,39,70,Successful,59,40,8,22.2,31.9,19.7,96.4,0.0,2,2,31,0,1.4,Balanced
+420,70,42,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_9,20,64,0,69,Successful,59,40,8,28.6,38.4,26.9,96.6,0.0,2,2,43,0,-4.3,Control
+421,71,1,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_3,94,74,70,94,Successful,59,40,7,8.9,35.2,18.9,55.1,0.0,2,2,53,0,3.2,Chaos
+422,71,15,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,39,14,35,4,Successful,59,40,9,18.0,46.6,31.6,76.8,0.0,2,2,12,0,8.0,Momentum Shift
+423,71,1,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,73,49,68,65,Successful,59,40,8,9.0,67.8,18.4,70.3,0.0,2,2,22,0,5.3,Momentum Shift
+424,71,10,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,81,100,60,100,Successful,59,40,5,15.6,30.4,24.3,100.5,0.0,2,2,37,0,2.5,Control
+425,71,45,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_2,72,67,77,74,Successful,60,40,6,36.8,65.5,17.5,100.4,0.0,2,2,36,0,-1.3,Momentum Shift
+426,71,12,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_5,97,70,83,51,Successful,60,40,3,28.1,22.1,34.1,94.2,0.0,2,2,76,0,-0.7,Balanced
+427,72,59,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,59,18,49,7,Successful,60,40,7,21.4,86.2,32.8,83.4,0.0,2,2,48,0,6.9,Momentum Shift
+428,72,52,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,51,30,33,19,Successful,60,40,1,14.8,82.9,21.6,76.0,0.0,2,2,34,0,-1.3,Control
+429,72,12,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,35,84,45,75,Successful,60,40,8,36.3,6.5,32.4,51.4,0.0,2,2,15,0,-4.0,Control
+430,72,57,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_6,50,92,33,87,Failed,60,40,2,25.9,83.1,33.7,113.2,0.35,2,2,24,0,-5.0,Control
+431,72,15,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_6,49,95,71,90,Successful,60,41,4,10.8,18.3,34.2,63.9,0.0,2,2,64,0,-4.9,Control
+432,72,31,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,87,31,79,20,Successful,60,41,8,33.6,82.3,10.5,116.7,0.0,2,2,56,0,2.1,Control
+433,73,44,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,39,81,58,84,Successful,60,41,9,39.7,85.9,19.7,111.0,0.0,2,2,25,0,-2.1,Momentum Shift
+434,73,19,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,20,56,35,56,Failed,60,41,1,16.0,8.9,29.5,69.2,0.0,2,2,62,0,4.7,Momentum Shift
+435,73,45,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_2,64,8,61,14,Successful,60,41,6,23.1,3.7,11.3,84.2,0.0,2,2,80,0,2.6,Chaos
+436,73,0,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,14,20,4,33,Successful,60,41,10,32.4,79.5,18.0,67.8,0.0,2,2,26,0,4.7,Momentum Shift
+437,73,11,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_6,53,47,39,52,Successful,60,41,10,14.0,94.9,33.1,84.7,0.0,2,2,58,0,2.5,Control
+438,73,29,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,76,33,60,18,Successful,60,41,3,42.9,12.6,28.0,63.5,0.0,2,2,57,0,8.4,Balanced
+439,74,52,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,100,34,93,45,Successful,60,41,3,22.3,21.5,15.4,102.4,0.0,2,2,58,0,4.5,Chaos
+440,74,26,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,30,79,33,74,Failed,60,41,10,32.4,46.4,10.3,33.3,0.0,2,2,57,0,-3.5,Balanced
+441,74,43,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_7,32,9,13,24,Successful,60,41,8,41.3,99.7,33.5,116.7,0.05,2,2,17,0,2.0,Control
+442,74,0,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,85,47,68,62,Failed,60,42,10,12.2,17.8,22.3,53.9,0.0,2,2,15,0,-0.6,Control
+443,74,20,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,5,16,11,13,Successful,60,42,7,16.3,87.8,25.3,96.2,0.0,2,2,56,0,-4.7,Momentum Shift
+444,74,27,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_6,19,71,36,91,Successful,60,42,1,12.6,6.4,14.6,67.0,0.0,2,2,66,0,-6.7,Balanced
+445,75,27,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,90,71,96,80,Successful,60,42,2,38.8,86.8,13.1,29.4,0.0,2,2,73,0,7.4,Chaos
+446,75,53,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_9,84,74,72,91,Successful,60,42,9,35.7,18.9,33.0,44.6,0.0,2,2,10,0,-0.0,Control
+447,75,56,MATCH001,Azure Falcons,Copilot United,Goal,Azure Falcons,AF_Player_5,50,47,62,33,Successful,60,42,8,23.2,95.6,24.9,20.6,0.11,3,2,95,1,9.4,Balanced
+448,75,20,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,82,36,77,19,Failed,60,43,9,43.1,38.8,20.0,37.8,0.0,3,2,19,0,9.3,Balanced
+449,75,5,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,36,82,59,71,Successful,60,43,5,24.6,43.8,30.2,51.0,0.0,3,2,25,0,3.7,Chaos
+450,75,22,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_6,49,60,41,76,Successful,60,43,2,35.3,81.3,25.3,63.4,0.0,3,2,64,0,-1.5,Control
+451,76,32,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_8,91,19,97,32,Successful,60,43,2,41.3,48.3,13.7,32.8,0.07,3,2,77,0,8.1,Chaos
+452,76,33,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,5,65,0,77,Successful,60,44,7,8.8,66.4,24.2,45.3,0.0,3,2,64,0,-4.9,Control
+453,76,49,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_2,100,23,100,5,Successful,60,44,7,40.1,30.5,24.7,65.5,0.0,3,2,20,0,3.4,Momentum Shift
+454,76,21,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,77,33,95,19,Successful,60,44,9,5.7,40.1,10.3,85.6,0.0,3,2,65,0,-0.8,Balanced
+455,76,55,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_10,78,46,97,51,Successful,60,44,2,10.0,2.4,12.8,21.6,0.0,3,2,48,0,9.4,Control
+456,76,13,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_3,80,68,67,53,Successful,60,44,7,5.9,17.4,13.8,90.3,0.47,3,2,48,0,9.3,Balanced
+457,77,1,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_10,50,6,46,0,Successful,60,45,7,44.2,85.0,28.4,79.6,0.0,3,2,23,0,1.1,Momentum Shift
+458,77,2,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_8,86,62,75,45,Successful,60,45,1,21.9,32.3,11.6,109.3,0.0,3,2,77,0,-1.7,Balanced
+459,77,7,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,2,20,0,12,Successful,60,45,6,22.5,51.3,24.7,88.5,0.0,3,2,70,0,8.4,Balanced
+460,77,8,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_7,86,83,100,86,Failed,60,45,3,29.9,29.0,28.7,86.7,0.0,3,2,70,0,-7.4,Chaos
+461,77,10,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_2,63,38,53,31,Failed,61,45,1,19.4,26.8,26.9,37.5,0.0,3,2,16,0,7.2,Control
+462,77,51,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,71,28,77,24,Successful,61,45,6,35.8,77.2,23.9,109.6,0.0,3,2,53,0,7.1,Control
+463,78,45,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_8,96,14,77,33,Failed,61,45,9,6.7,11.4,25.7,107.1,0.0,3,2,23,0,8.2,Chaos
+464,78,46,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_8,12,19,28,22,Successful,61,45,3,9.9,21.0,34.2,96.9,0.0,3,2,52,0,-9.9,Balanced
+465,78,21,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,96,53,94,73,Successful,61,45,3,35.1,53.4,29.7,33.8,0.0,3,2,41,0,-1.4,Balanced
+466,78,57,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_9,3,56,0,36,Successful,61,45,2,8.4,32.2,34.5,36.4,0.0,3,2,76,0,-8.8,Control
+467,78,42,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_3,80,91,97,100,Successful,61,45,7,21.1,68.4,23.8,50.4,0.0,3,2,47,0,4.9,Momentum Shift
+468,78,0,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_9,51,57,67,50,Successful,62,45,10,36.5,65.6,27.4,108.8,0.0,3,2,79,0,5.6,Balanced
+469,79,49,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_5,49,92,70,80,Successful,62,45,9,16.4,10.2,23.8,72.1,0.0,3,2,76,0,5.1,Chaos
+470,79,1,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_9,99,38,100,45,Successful,62,45,2,34.3,84.3,16.5,70.7,0.0,3,2,74,0,-7.5,Control
+471,79,28,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_1,95,74,100,94,Failed,62,45,10,14.4,30.6,26.7,101.5,0.0,3,2,78,0,1.5,Chaos
+472,79,45,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,24,99,22,100,Successful,62,45,3,33.5,83.0,12.0,26.2,0.0,3,2,22,0,7.8,Balanced
+473,79,13,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_6,71,66,95,71,Successful,62,45,8,32.6,94.8,28.3,61.7,0.36,3,2,43,0,-6.7,Chaos
+474,79,31,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_3,67,15,86,8,Successful,62,46,8,6.3,16.5,24.0,112.2,0.0,3,2,68,0,-7.6,Balanced
+475,80,7,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,15,47,9,50,Successful,63,46,5,24.4,79.3,13.6,79.0,0.0,3,2,48,0,-9.0,Momentum Shift
+476,80,56,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_3,15,70,12,54,Successful,63,46,7,24.2,31.7,21.3,53.8,0.0,3,2,15,0,-2.5,Chaos
+477,80,48,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_11,57,19,78,19,Successful,63,46,10,31.6,41.6,15.8,59.5,0.0,3,2,21,0,0.8,Balanced
+478,80,47,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_2,73,80,98,79,Successful,63,46,9,8.4,95.6,23.5,95.8,0.0,3,2,25,0,9.1,Chaos
+479,80,48,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,23,2,15,0,Failed,64,46,10,22.8,80.9,25.2,60.2,0.0,3,2,41,0,-9.1,Control
+480,80,21,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_7,48,32,28,19,Successful,64,46,9,11.7,15.3,16.4,29.0,0.0,3,2,22,0,-3.9,Balanced
+481,81,43,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_10,91,7,85,11,Successful,64,46,6,10.7,89.4,16.4,114.2,0.0,3,2,22,0,8.0,Control
+482,81,12,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_10,96,64,95,51,Successful,65,46,1,17.7,55.8,11.6,22.9,0.0,3,2,44,0,2.7,Control
+483,81,17,MATCH001,Azure Falcons,Copilot United,Shot,Copilot United,CU_Player_10,71,83,96,71,Successful,65,46,9,13.1,96.8,19.3,118.5,0.35,3,2,48,0,5.6,Balanced
+484,81,58,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_1,79,37,95,27,Successful,65,47,1,42.3,48.7,24.9,103.9,0.0,3,2,10,0,-2.4,Momentum Shift
+485,81,53,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_10,20,94,29,100,Successful,65,47,5,8.6,70.1,30.8,92.5,0.0,3,2,18,0,10.0,Balanced
+486,81,13,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_6,81,33,100,41,Failed,65,47,4,31.5,32.8,15.3,115.9,0.0,3,2,44,0,-3.4,Chaos
+487,82,41,MATCH001,Azure Falcons,Copilot United,Pressure,Copilot United,CU_Player_10,86,22,87,37,Failed,66,47,7,26.5,78.9,26.2,27.8,0.0,3,2,72,0,-9.4,Balanced
+488,82,43,MATCH001,Azure Falcons,Copilot United,Cross,Azure Falcons,AF_Player_7,22,98,41,78,Successful,66,47,8,19.8,20.1,10.2,94.3,0.0,3,2,25,0,5.2,Momentum Shift
+489,82,12,MATCH001,Azure Falcons,Copilot United,Interception,Azure Falcons,AF_Player_10,28,29,34,32,Successful,66,47,5,24.7,70.7,25.2,20.7,0.0,3,2,14,0,9.7,Balanced
+490,82,7,MATCH001,Azure Falcons,Copilot United,Tackle,Copilot United,CU_Player_10,24,84,46,100,Successful,66,47,2,28.5,74.9,13.2,113.4,0.0,3,2,32,0,7.1,Momentum Shift
+491,82,12,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,68,78,59,93,Successful,66,47,1,42.5,64.5,33.6,25.2,0.0,3,2,68,0,8.8,Balanced
+492,82,54,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_5,63,46,71,28,Successful,67,47,1,16.1,42.6,21.2,20.5,0.0,3,2,38,0,-6.1,Control
+493,83,56,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_1,88,54,67,49,Successful,67,47,3,18.2,7.2,25.6,22.8,0.0,3,2,35,0,-1.4,Control
+494,83,37,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_6,60,30,56,13,Successful,68,47,9,36.8,94.4,29.4,82.0,0.0,3,2,52,0,5.3,Balanced
+495,83,37,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_1,88,8,100,0,Successful,68,47,8,7.2,61.5,20.8,30.2,0.0,3,2,17,0,-8.9,Control
+496,83,18,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_7,29,76,54,95,Successful,69,47,8,20.4,79.7,32.0,81.9,0.0,3,2,11,0,-3.2,Control
+497,83,29,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_10,76,91,55,100,Successful,69,47,10,10.0,51.4,18.9,68.1,0.0,3,2,34,0,2.4,Chaos
+498,83,15,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_1,55,65,71,67,Successful,69,47,10,40.4,77.8,13.7,50.9,0.0,3,2,49,0,-3.1,Momentum Shift
+499,84,0,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_11,64,71,42,78,Successful,69,47,4,36.4,34.8,26.7,89.5,0.13,3,2,54,0,9.6,Momentum Shift
+500,84,54,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_6,20,13,24,0,Successful,69,48,4,41.8,64.2,27.3,66.7,0.0,3,2,73,0,-5.7,Balanced
+501,84,47,MATCH001,Azure Falcons,Copilot United,Cross,Copilot United,CU_Player_6,51,23,26,26,Successful,69,48,2,19.3,55.9,13.6,64.0,0.0,3,2,11,0,2.6,Momentum Shift
+502,84,2,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,33,92,19,93,Successful,69,48,4,12.1,3.1,31.1,111.1,0.0,3,2,80,0,-9.6,Chaos
+503,84,24,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,58,30,56,33,Successful,69,48,9,44.1,99.8,32.0,107.8,0.0,3,2,31,0,-8.7,Chaos
+504,84,56,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,47,40,60,47,Successful,69,48,1,35.5,59.1,31.4,49.4,0.0,3,2,41,0,-7.0,Chaos
+505,85,3,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_5,74,62,62,47,Failed,69,48,10,7.6,51.4,28.8,84.5,0.0,3,2,70,0,0.2,Balanced
+506,85,33,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_6,61,91,67,100,Successful,70,48,10,31.0,21.5,32.4,65.2,0.36,3,2,44,0,-5.3,Chaos
+507,85,19,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_7,47,32,57,17,Failed,70,49,2,16.8,52.4,15.8,24.1,0.0,3,2,27,0,0.2,Momentum Shift
+508,85,27,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_7,40,34,39,15,Successful,70,49,8,14.4,64.9,19.0,28.2,0.0,3,2,32,0,6.9,Control
+509,85,50,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_4,4,69,0,70,Successful,70,49,6,15.0,74.8,29.2,104.5,0.0,3,2,35,0,-6.2,Chaos
+510,85,54,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_9,38,36,35,41,Successful,70,49,10,35.3,2.2,26.4,118.9,0.0,3,2,61,0,9.0,Balanced
+511,86,14,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_4,100,70,100,79,Successful,71,49,6,36.7,32.0,14.7,97.0,0.0,3,2,69,0,4.0,Chaos
+512,86,28,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,16,39,38,19,Successful,71,49,6,18.6,42.5,27.1,60.3,0.0,3,2,73,0,5.6,Momentum Shift
+513,86,20,MATCH001,Azure Falcons,Copilot United,Recovery,Copilot United,CU_Player_10,19,42,30,62,Failed,71,49,7,13.2,39.7,23.4,38.8,0.0,3,2,60,0,-7.8,Balanced
+514,86,40,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,22,4,41,22,Successful,71,49,1,12.5,7.9,34.1,48.4,0.0,3,2,72,0,-5.3,Control
+515,86,29,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_9,52,50,37,37,Successful,71,49,9,21.7,74.6,19.7,110.4,0.0,3,2,26,0,-5.9,Chaos
+516,86,19,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_11,39,75,26,87,Successful,71,49,5,13.1,99.1,21.1,102.5,0.0,3,2,68,0,2.1,Chaos
+517,87,33,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_10,73,5,95,0,Successful,71,49,8,18.9,84.4,29.8,59.1,0.0,3,2,46,0,6.5,Chaos
+518,87,26,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_10,84,23,100,39,Successful,72,49,7,32.9,5.3,32.1,35.8,0.0,3,2,22,0,7.7,Momentum Shift
+519,87,42,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_4,97,70,79,73,Successful,72,49,2,25.2,78.2,20.3,36.5,0.0,3,2,19,0,-5.9,Control
+520,87,29,MATCH001,Azure Falcons,Copilot United,Goal,Azure Falcons,AF_Player_11,48,43,70,48,Successful,73,49,2,33.4,14.5,26.8,66.4,0.25,4,2,95,1,-0.8,Control
+521,87,35,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_8,20,21,0,39,Failed,73,50,3,16.8,53.9,19.8,27.8,0.0,4,2,22,0,5.3,Momentum Shift
+522,87,9,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_3,86,68,74,76,Successful,73,50,9,30.6,71.9,32.4,59.1,0.0,4,2,16,0,-3.8,Control
+523,88,38,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_7,47,30,34,15,Failed,73,50,7,6.1,2.4,30.5,88.0,0.0,4,2,12,0,-8.7,Control
+524,88,51,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_11,53,65,34,65,Successful,73,50,9,30.1,62.8,33.4,59.5,0.0,4,2,51,0,-1.4,Chaos
+525,88,13,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_6,40,1,39,0,Successful,73,50,4,7.6,81.7,26.2,56.9,0.0,4,2,68,0,-8.7,Chaos
+526,88,26,MATCH001,Azure Falcons,Copilot United,Pressure,Azure Falcons,AF_Player_10,91,68,100,84,Failed,73,50,5,43.4,60.4,34.5,89.6,0.0,4,2,31,0,3.6,Chaos
+527,88,21,MATCH001,Azure Falcons,Copilot United,Possession Change,Azure Falcons,AF_Player_6,8,42,0,60,Successful,73,50,7,25.4,74.4,22.6,90.5,0.0,4,2,67,0,-9.7,Control
+528,88,39,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,96,31,100,16,Successful,74,50,3,20.0,30.4,13.8,40.4,0.0,4,2,17,0,-9.2,Balanced
+529,89,47,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_3,97,5,100,11,Successful,74,50,1,14.2,73.6,18.6,40.6,0.0,4,2,46,0,-8.9,Chaos
+530,89,51,MATCH001,Azure Falcons,Copilot United,Interception,Copilot United,CU_Player_4,41,23,44,43,Successful,74,50,2,39.8,7.9,14.8,83.4,0.0,4,2,10,0,-7.2,Chaos
+531,89,8,MATCH001,Azure Falcons,Copilot United,Tackle,Azure Falcons,AF_Player_10,26,30,33,15,Successful,74,50,8,17.5,72.4,16.1,37.6,0.0,4,2,64,0,-5.0,Momentum Shift
+532,89,36,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_11,61,10,59,15,Failed,74,50,3,23.8,42.8,25.2,63.3,0.0,4,2,58,0,-6.9,Balanced
+533,89,1,MATCH001,Azure Falcons,Copilot United,Possession Change,Copilot United,CU_Player_7,38,76,47,65,Successful,74,50,3,15.3,46.9,21.3,57.5,0.0,4,2,80,0,2.1,Control
+534,89,21,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,0,1,7,4,Failed,75,50,7,42.0,94.1,34.3,57.3,0.0,4,2,72,0,-0.2,Control
+535,90,26,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_2,24,97,26,93,Successful,75,50,9,33.4,63.9,19.2,25.8,0.0,4,2,54,0,-2.3,Balanced
+536,90,47,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_8,80,90,98,71,Successful,75,50,5,29.2,94.5,13.7,44.7,0.0,4,2,28,0,1.6,Chaos
+537,90,0,MATCH001,Azure Falcons,Copilot United,Shot,Azure Falcons,AF_Player_2,50,90,62,75,Failed,75,50,3,38.2,26.0,17.6,116.8,0.55,4,2,76,0,3.2,Balanced
+538,90,37,MATCH001,Azure Falcons,Copilot United,Recovery,Azure Falcons,AF_Player_7,11,13,26,29,Failed,75,51,3,15.8,21.7,28.7,89.9,0.0,4,2,54,0,-9.9,Chaos
+539,90,52,MATCH001,Azure Falcons,Copilot United,Pass,Azure Falcons,AF_Player_2,67,53,83,51,Successful,75,51,3,12.1,19.5,13.4,68.6,0.0,4,2,65,0,0.1,Control
+540,90,28,MATCH001,Azure Falcons,Copilot United,Pass,Copilot United,CU_Player_4,23,97,10,93,Successful,75,51,8,30.1,62.8,31.7,36.6,0.0,4,2,62,0,-4.1,Balanced

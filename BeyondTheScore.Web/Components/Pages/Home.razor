@@ -1,0 +1,829 @@
+﻿@page "/"
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+
+@using System.Runtime.InteropServices
+@using System.Text.Json
+@using BeyondTheScore.Dto
+@using BeyondTheScore.Web.Helpers
+@using BeyondTheScore.Web.Models.Enums
+@using BeyondTheScore.Web.RefitInterface
+@using Microsoft.SemanticKernel
+@using Microsoft.SemanticKernel.ChatCompletion
+@using Microsoft.SemanticKernel.Agents.Orchestration
+@using Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+@using Microsoft.SemanticKernel.Agents.Runtime.InProcess
+@using BeyondTheScore.Web.Services.Ai
+@using Markdig
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.SemanticKernel.Agents
+
+@using Microsoft.AspNetCore.SignalR.Client
+@using Refit
+@implements IAsyncDisposable
+
+@inject StudioPanelService PanelService
+@inject IFootballAnalyticsApi FootballAnalyticsApi
+@inject UserPreferenceState PreferenceState
+@inject IJSRuntime JS
+@inject NavigationManager NavigationManager
+@inject TooltipService TooltipService
+
+@rendermode InteractiveServer
+
+<PageTitle>Beyond The Score | Broadcast Studio</PageTitle>
+
+<div class="studio-container container-fluid p-3 p-lg-4">
+    <header class="d-flex justify-content-between align-items-center mb-4 px-4 py-3 studio-card rounded-3 shadow-lg">
+        <div class="d-flex align-items-center gap-3">
+
+            <h4 class="mb-0 fw-bold tracking-tight text-white d-flex align-items-center gap-2">
+                Beyond The Score <span class="badge badge-live px-3 py-2 text-uppercase tracking-wider"> LIVE </span>
+            </h4>
+        </div>
+
+        @if (_homeTeam != null && _awayTeam != null)
+        {
+            <div class="d-flex flex-column align-items-end gap-2">
+                <div
+                    class="d-flex align-items-center gap-3 px-3 py-2 rounded-3 studio-card border border-secondary border-opacity-25">
+                    <div class="text-end">
+                        <div class="small text-white-50 text-uppercase">Home</div>
+                        <div class="fw-bold text-white">@_homeTeam.Team</div>
+                    </div>
+
+                    <div class="display-6 fw-bold studio-accent-text font-monospace">
+                        @_homeScore - @_awayScore
+                    </div>
+
+                    <div class="text-start">
+                        <div class="small text-white-50 text-uppercase">Away</div>
+                        <div class="fw-bold text-white">@_awayTeam.Team</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="ssmall text-white-50 text-uppercase">Audience Tone</span>
+            <RadzenSelectBar TValue="AudienceType"
+                             @bind-Value="SelectedAudience"
+                             Size="ButtonSize.Small"
+                             Class="studio-selectbar"
+                             Style="margin: 1rem;">
+                <Items>
+                    <RadzenSelectBarItem Text="Matchday" Value="AudienceType.MatchDay"/>
+                    <RadzenSelectBarItem Text="SeasonTicket" Value="AudienceType.SeasonTicket"/>
+                    <RadzenSelectBarItem Text="Statto" Value="AudienceType.Statto"/>
+                </Items>
+            </RadzenSelectBar>
+        </div>
+        
+        <a href="/logout" class="btn btn-outline-danger btn-sm fw-bold px-3">
+            Logout
+        </a>
+    </header>
+
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-4">
+            <div class="card studio-card shadow-lg h-100 d-flex flex-column"
+                 style="max-height: calc(100vh - 200px);">
+                <div
+                    class="card-header border-0 d-flex justify-content-between align-items-center bg-transparent py-3 px-3">
+                    <span class="fw-bold fs-6 text-uppercase text-white-50">
+                        <i class="bi bi-broadcast me-2 studio-accent-text"></i> Key moments
+                    </span>
+                </div>
+                <div class="card-body overflow-y-auto p-3 font-monospace studio-scrollbar" style="font-size: 0.85rem;">
+
+                    @if (!_keyMomentEventLog.Any())
+                    {
+                        <div class="text-center text-muted my-5">
+                            <div class="spinner-grow spinner-grow-sm studio-spinner-accent mb-2" role="status"></div>
+                            <p class="small mb-0 text-white-50">Awaiting match telemetry...</p>
+                        </div>
+                    }
+
+                    @foreach (KeyMomentDto eventLog in _keyMomentEventLog)
+                    {
+                        <div class="p-3 mb-2 rounded-3 studio-event-card @GetEventLogBackground(eventLog.EventType)">
+                            <div class="d-flex justify-content-between text-muted small mb-1">
+                                <span class="fw-bold text-white">@eventLog.Minute'</span>
+                                <span class="fw-bold text-white">@eventLog.PlayerName (@eventLog.Team)</span>
+                                <span class="badge studio-badge-dark">@eventLog.EventType</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-8">
+            <div class="card studio-card shadow-lg h-100 d-flex flex-column"
+                 style="max-height: calc(100vh - 200px);">
+                <div class="card-header border-0 bg-transparent py-3 px-3 border-bottom-dark">
+                    <div class="d-flex justify-content-around align-items-center text-center">
+                        <div class="host-avatar">
+                            <div class="avatar-ring">
+                                <img @ref="jimmyAvatarRef"
+                                     @onmouseenter="@(() => ShowTooltip(jimmyAvatarRef, jimmyTooltip))"
+                                     src="img/Jimmy.png"
+                                     class="rounded-circle"
+                                     style="width: 44px; height: 44px; object-fit: cover;"
+                                     alt="Jimmy"/>
+                            </div>
+                            <div class="small mt-2 text-white-50 font-monospace">Jimmy</div>
+                        </div>
+                        <div class="host-avatar">
+                            <div class="avatar-ring">
+                                <img @ref="stattoSamAvatarRef"
+                                     @onmouseenter="@(() => ShowTooltip(stattoSamAvatarRef, stattoSamTooltip))"
+                                     src="img/Sam.png"
+                                     class="rounded-circle"
+                                     style="width: 44px; height: 44px; object-fit: cover;"
+                                     alt="Statto Sam"/>
+                            </div>
+                            <div class="small mt-2 text-white-50 font-monospace">Statto Sam</div>
+                        </div>
+                        <div class="host-avatar">
+                            <div class="avatar-ring">
+                                <img @ref="maccaAvatarRef"
+                                     @onmouseenter="@(() => ShowTooltip(maccaAvatarRef, maccaTooltip))"
+                                     src="img/Macca.png"
+                                     class="rounded-circle"
+                                     style="width: 44px; height: 44px; object-fit: cover;"
+                                     alt="Macca"/>
+                            </div>
+                            <div class="small mt-2 text-white-50 font-monospace">Macca</div>
+                        </div>
+                        <div class="host-avatar">
+                            <div class="avatar-ring">
+                                <img @ref="sophieAvatarRef"
+                                     @onmouseenter="@(() => ShowTooltip(sophieAvatarRef, sophieTooltip))"
+                                     src="img/Sophie.png"
+                                     class="rounded-circle"
+                                     style="width: 44px; height: 44px; object-fit: cover;"
+                                     alt="Sophie"/>
+                            </div>
+                            <div class="small mt-2 text-white-50 font-monospace">Sophie</div>
+                        </div>
+                        <div class="host-avatar">
+                            <div class="avatar-ring">
+                                <img @ref="ricoAvatarRef"
+                                     @onmouseenter="@(() => ShowTooltip(ricoAvatarRef, ricoTooltip))"
+                                     src="img/Rico.png"
+                                     class="rounded-circle"
+                                     style="width: 44px; height: 44px; object-fit: cover;"
+                                     alt="Rico"/>
+                            </div>
+                            <div class="small mt-2 text-white-50 font-monospace">Rico</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-body overflow-y-auto p-4 flex-grow-1 studio-chat-bg studio-scrollbar"
+                     id="chatScrollArea">
+                    @if (!chatMessages.Any())
+                    {
+                        <div class="text-center text-muted my-5 py-5">
+                            <h4 class="text-white-50 font-monospace">Studio On Standby</h4>
+                            <p class="small text-white-50">Enter a prompt below to seed the debate!</p>
+                        </div>
+                    }
+
+                    @foreach (ChatMessageContent chatMessageContent in chatMessages)
+                    {
+                        bool isUser = chatMessageContent.Role == AuthorRole.User;
+
+                        <div class="d-flex flex-column mb-3 @(isUser ? "align-items-end" : "align-items-start")">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <span class="badge @SetAgentBadgeStyle(chatMessageContent.AuthorName)">
+                                    @(chatMessageContent.AuthorName ?? chatMessageContent.Role.ToString())
+                                </span>
+                            </div>
+                            <div class="p-2 rounded-3 shadow-sm @(isUser ? "chat-bubble-user" : "chat-bubble-agent")"
+                                 style="max-width: 85%; font-size: 0.95rem; line-height: 1.5;">
+                                @RenderChatContent(chatMessageContent)
+                            </div>
+                        </div>
+                    }
+
+                    @if (isProcessing)
+                    {
+                        <div class="studio-accent-text fst-italic my-2 d-flex align-items-center gap-2">
+                            <div class="spinner-border spinner-border-sm" role="status"></div>
+                            <span>Studio panel is analysing the current state of play...</span>
+                        </div>
+                    }
+                </div>
+
+                <div class="card-footer border-0 p-3 bg-transparent border-top-dark">
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control studio-input"
+                               placeholder="Ask the studio panel or broadcast an event..."
+                               @bind="userInput"
+                               @bind:event="oninput"/>
+
+                        <button class="btn studio-btn-primary px-4 fw-bold"
+                                type="button"
+                                @onclick="StartStudioDiscussionAsync"
+                                disabled="@string.IsNullOrWhiteSpace(userInput)">
+                            Broadcast
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12">
+            <div class="card studio-card shadow-lg h-100 d-flex flex-column"
+                 style="max-height: calc(100vh - 200px);">
+                <div
+                    class="card-header border-0 d-flex justify-content-between align-items-center bg-transparent py-3 px-3">
+                    <span class="fw-bold fs-6 text-uppercase text-white-50">
+                        <i class="bi bi-graph-up me-2 studio-tertiary-text"></i> Tactical Insights
+                    </span>
+                </div>
+
+                <div class="card-body overflow-y-auto p-3 studio-scrollbar">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold text-white-50 text-uppercase small">Momentum Shifts</span>
+                            <span class="badge studio-badge-outline">@_momentumShifts.Count</span>
+                        </div>
+
+                        @if (!_momentumShifts.Any())
+                        {
+                            <div class="text-center text-muted my-4">
+                                <div class="spinner-grow spinner-grow-sm studio-spinner-accent mb-2"
+                                     role="status"></div>
+                                <p class="small mb-0 text-white-50">Awaiting momentum data...</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <RadzenChart Class="studio-chart" Style="height: 250px;">
+                                @foreach (IGrouping<string, MomentumChartPoint> teamMomentum in MomentumChartPoints.GroupBy(point => point.Team))
+                                {
+                                    <RadzenLineSeries Data="@teamMomentum"
+                                                      CategoryProperty="Minute"
+                                                      ValueProperty="Momentum"
+                                                      Title="@teamMomentum.Key"/>
+                                }
+
+                                <RadzenCategoryAxis Padding="20"/>
+                                <RadzenValueAxis>
+                                    <RadzenGridLines Visible="true"/>
+                                </RadzenValueAxis>
+                                <RadzenLegend Visible="true"/>
+                            </RadzenChart>
+                        }
+                    </div>
+
+                    <hr class="border-secondary opacity-25"/>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold text-white-50 text-uppercase small">Top Players This Season</span>
+                            <span class="badge studio-badge-outline">@_topPlayers.Count</span>
+                        </div>
+
+                        @if (!_topPlayers.Any())
+                        {
+                            <div class="text-center text-muted my-4">
+                                <div class="spinner-grow spinner-grow-sm studio-spinner-accent mb-2"
+                                     role="status"></div>
+                                <p class="small mb-0 text-white-50">Awaiting player data...</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <RadzenChart Class="studio-chart" Style="height: 320px;">
+                                <RadzenColumnSeries Data="@TopPlayersChartData"
+                                                    CategoryProperty="PlayerName"
+                                                    ValueProperty="Goals"
+                                                    Title="Goals"/>
+                                <RadzenColumnSeries Data="@TopPlayersChartData"
+                                                    CategoryProperty="PlayerName"
+                                                    ValueProperty="Shots"
+                                                    Title="Shots"/>
+                                <RadzenColumnSeries Data="@TopPlayersChartData"
+                                                    CategoryProperty="PlayerName"
+                                                    ValueProperty="Xg"
+                                                    Title="xG"/>
+
+                                <RadzenCategoryAxis Padding="20"/>
+                                <RadzenValueAxis>
+                                    <RadzenGridLines Visible="true"/>
+                                </RadzenValueAxis>
+                                <RadzenLegend Visible="true"/>
+                            </RadzenChart>
+                        }
+                    </div>
+
+                    <hr class="border-secondary opacity-25"/>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold text-white-50 text-uppercase small">Match Summary</span>
+                        </div>
+
+                        @if (!_finalWhistleTriggered)
+                        {
+                            <div class="text-center text-muted my-4">
+                                <div class="spinner-grow spinner-grow-sm studio-spinner-accent mb-2"
+                                     role="status"></div>
+                                <p class="small mb-0 text-white-50">Awaiting final team summary stats...</p>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (_homeTeam != null && _awayTeam != null)
+                            {
+                                <RadzenChart Class="studio-chart" Style="height: 250px;">
+                                    <RadzenBarSeries Data="@HomeTeamSummaryChartData"
+                                                     CategoryProperty="Metric"
+                                                     ValueProperty="Value"
+                                                     Title="@_homeTeam.Team"/>
+
+                                    <RadzenBarSeries Data="@AwayTeamSummaryChartData"
+                                                     CategoryProperty="Metric"
+                                                     ValueProperty="Value"
+                                                     Title="@_awayTeam.Team"/>
+
+                                    <RadzenCategoryAxis Padding="10"/>
+                                    <RadzenValueAxis>
+                                        <RadzenGridLines Visible="true"/>
+                                    </RadzenValueAxis>
+                                    <RadzenLegend Visible="true" />
+                                </RadzenChart>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="card-footer border-0 text-white-50 small py-3 text-center bg-transparent border-top-dark">
+                    Powered by @RuntimeInformation.FrameworkDescription
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string userInput = string.Empty;
+    private bool isProcessing;
+    private readonly List<ChatMessageContent> chatMessages = [];
+    private string jsonMatchData = string.Empty;
+    private readonly List<KeyMomentDto> _keyMomentEventLog = [];
+    private HubConnection? _hubConnection;
+    private MatchSummaryDto _matchSummary = new();
+    private List<PlayerStatsDto> _topPlayers = [];
+    private TeamStatsDto? _homeTeam;
+    private TeamStatsDto? _awayTeam;
+    private List<MomentumShiftDto> _momentumShifts = [];
+    private int _homeScore;
+    private int _awayScore;
+    private CancellationTokenSource? _chatCts;
+    private bool _finalWhistleTriggered;
+    private static readonly MarkdownPipeline MarkdownPipeline =
+        new MarkdownPipelineBuilder()
+            .UseAdvancedExtensions()
+            .Build();
+    
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthenticationStateTask { get; set; } = default!;
+
+    private ElementReference jimmyAvatarRef;
+    private ElementReference stattoSamAvatarRef;
+    private ElementReference maccaAvatarRef;
+    private ElementReference sophieAvatarRef;
+    private ElementReference ricoAvatarRef;
+    
+    private const string jimmyTooltip =
+        "Jimmy – your host for the match, guiding the story, spotlighting key moments, and keeping the discussion moving.";
+
+    private const string stattoSamTooltip =
+        "Statto Sam – football data expert, turning match events into stats, trends, and performance insights.";
+
+    private const string maccaTooltip =
+        "Macca – tactical pundit, explaining formations, pressing, momentum shifts, and what’s happening on the pitch.";
+
+    private const string sophieTooltip =
+        "Sophie – match storyteller, connecting the dots and explaining why key moments matter.";
+
+    private const string ricoTooltip =
+        "Rico – audience specialist, adapting insights for analysts, broadcasters, and fans of every kind.";
+
+    private void ShowTooltip(ElementReference elementReference, string content, TooltipOptions? options = null)
+        => TooltipService.Open(elementReference, content, options);
+
+    private List<MomentumChartPoint> MomentumChartPoints =>
+        _momentumShifts
+            .OrderBy(shift => shift.Minute)
+            .GroupBy(shift => shift.Team)
+            .SelectMany(teamGroup =>
+            {
+                decimal runningMomentum = 0;
+
+                return teamGroup
+                    .OrderBy(shift => shift.Minute)
+                    .Select(shift =>
+                    {
+                        runningMomentum += shift.MomentumDelta;
+
+                        return new MomentumChartPoint
+                        {
+                            Minute = shift.Minute,
+                            Team = shift.Team,
+                            Momentum = runningMomentum
+                        };
+                    });
+            })
+            .OrderBy(point => point.Minute)
+            .ToList();
+
+    private sealed class MomentumChartPoint
+    {
+        public int Minute { get; init; }
+        public decimal Momentum { get; init; }
+        public string Team { get; init; } = string.Empty;
+    }
+    
+    private MarkupString RenderChatContent(ChatMessageContent message)
+    {
+        string raw = message.Content ?? string.Empty;
+
+        // Convert Markdown to HTML
+        string html = Markdig.Markdown.ToHtml(raw, MarkdownPipeline);
+
+        // If you want to be extra safe, you could sanitize `html` here.
+
+        return new MarkupString(html);
+    }
+
+    private AudienceType SelectedAudience
+    {
+        get => PreferenceState.Audience;
+        set
+        {
+            PreferenceState.SetAudience(value);
+            _ = JS.InvokeVoidAsync("localStorage.setItem", "audienceType", value.ToString());
+        }
+    }
+
+    private List<PlayerStatsDto> TopPlayersChartData =>
+        _topPlayers
+            .OrderByDescending(player => player.Goals)
+            .ThenByDescending(player => player.Xg)
+            .ThenByDescending(player => player.Shots)
+            .Take(6)
+            .ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthenticationStateTask;
+        bool isAuthenticated = authState.User?.Identity?.IsAuthenticated == true;
+
+        if (!isAuthenticated)
+        {
+            return;
+        }
+        ApiResponse<MatchStateDto> matchStateResponse = await FootballAnalyticsApi.GetMatchState(1);
+
+        if (matchStateResponse is { IsSuccessStatusCode: true, Content: not null })
+        {
+            _momentumShifts = [];
+            _matchSummary = matchStateResponse.Content.Summary;
+            _topPlayers = matchStateResponse.Content.TopPlayers;
+            _homeTeam = matchStateResponse.Content.HomeTeam;
+            _awayTeam = matchStateResponse.Content.AwayTeam;
+        }
+
+        _hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/matchhub"))
+            .WithAutomaticReconnect()
+            .Build();
+
+        _hubConnection.On<KeyMomentDto>("MatchEvent", async matchEvent =>
+        {
+            bool alreadyTracked = _keyMomentEventLog.Any(existing =>
+                existing.Minute == matchEvent.Minute &&
+                existing.Team == matchEvent.Team &&
+                existing.PlayerName == matchEvent.PlayerName &&
+                existing.EventType == matchEvent.EventType);
+
+            if (!alreadyTracked)
+            {
+                _keyMomentEventLog.Add(matchEvent);
+                _keyMomentEventLog.Sort((a, b) => b.Minute.CompareTo(a.Minute));
+
+                if (matchEvent.EventType == "Goal")
+                {
+                    UpdateScore(matchEvent);
+                    _ = InvokeAsync(async () => { await StartStudioDiscussionCoreAsync($"{matchEvent.PlayerName} just scored!", fromUser: false); });
+                }
+
+                if (!_finalWhistleTriggered && matchEvent.Minute >= 90)
+                {
+                    _finalWhistleTriggered = true;
+                    _ = InvokeAsync(async () => { await StartStudioDiscussionCoreAsync("That's full time! We've reached the 90th minute. Panel, please give your final thoughts and wrap up today's broadcast.", fromUser: false); });
+                }
+            }
+
+            await InvokeAsync(StateHasChanged);
+        });
+
+        _hubConnection.On<MomentumShiftDto>("MomentumShift", async momentumShift =>
+        {
+            bool alreadyTracked = _momentumShifts.Any(existingShift =>
+                existingShift.Minute == momentumShift.Minute &&
+                existingShift.Team == momentumShift.Team &&
+                existingShift.MomentumDelta == momentumShift.MomentumDelta);
+
+            if (!alreadyTracked)
+            {
+                _momentumShifts.Add(momentumShift);
+
+                _momentumShifts = _momentumShifts
+                    .OrderBy(shift => shift.Minute)
+                    .TakeLast(120)
+                    .ToList();
+            }
+
+            await InvokeAsync(StateHasChanged);
+        });
+
+        await _hubConnection.StartAsync();
+
+        if (matchStateResponse.Content is not null)
+        {
+            _ = _hubConnection.SendAsync(
+                "StartMatchSimulation",
+                matchStateResponse.Content.KeyMoments,
+                matchStateResponse.Content.MomentumShifts,
+                2000);
+        }
+    }
+
+    private async Task StartStudioDiscussionAsync()
+    {
+        ApiResponse<EmptyResponse> response = await FootballAnalyticsApi.CanUserPromptAsync();
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            chatMessages.Add(new ChatMessageContent(AuthorRole.System,
+                "You’ve reached your studio prompt limit (10 prompts). Thanks for putting the panel through its paces!")
+            {
+                AuthorName = "Producer"
+            });
+
+            await InvokeAsync(StateHasChanged);
+            return;
+        }
+        
+        if (string.IsNullOrWhiteSpace(userInput))
+        {
+            return;
+        }
+
+        string prompt = userInput;
+        userInput = string.Empty;
+
+        await StartStudioDiscussionCoreAsync(prompt, fromUser: true);
+    }
+
+    private void UpdateScore(KeyMomentDto matchEvent)
+    {
+        if (_homeTeam is null || _awayTeam is null)
+        {
+            return;
+        }
+
+        string scoringTeam = matchEvent.Team;
+
+        if (string.Equals(scoringTeam, _homeTeam.Team, StringComparison.OrdinalIgnoreCase))
+        {
+            _homeScore++;
+        }
+        else if (string.Equals(scoringTeam, _awayTeam.Team, StringComparison.OrdinalIgnoreCase))
+        {
+            _awayScore++;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            return;
+        }
+
+        string audienceType = await JS.InvokeAsync<string>("localStorage.getItem", "audienceType");
+
+        if (Enum.TryParse<AudienceType>(audienceType, true, out var audience))
+        {
+            PreferenceState.SetAudience(audience);
+            StateHasChanged();
+        }
+    }
+
+    private async Task StartStudioDiscussionCoreAsync(string prompt, bool fromUser)
+    {
+        if (_chatCts is not null)
+        {
+            try
+            {
+                await _chatCts.CancelAsync();
+            }
+            catch (ObjectDisposedException)
+            {
+                // Ignore
+            }
+        }
+
+        _chatCts = new CancellationTokenSource();
+        using CancellationTokenSource localCts = _chatCts;
+        CancellationToken cancellationToken = localCts.Token;
+
+        isProcessing = true;
+        
+        string matchData = JsonSerializer.Serialize(_keyMomentEventLog, new JsonSerializerOptions { WriteIndented = true });
+        string audienceTone = PreferenceState.Audience.GetDisplayDescription();
+        
+        string finalMatchPayload = string.Empty;
+        
+        if (_finalWhistleTriggered)
+        {
+            finalMatchPayload = JsonSerializer.Serialize(new
+            {
+                MatchSummary = _matchSummary,
+                TopPlayers = _topPlayers,
+                HomeTeam = _homeTeam,
+                AwayTeam = _awayTeam
+            }, new JsonSerializerOptions { WriteIndented = true });
+        }
+       
+        
+        ChatMessageContent chatMessage = fromUser switch
+        {
+            true => new ChatMessageContent(AuthorRole.User, prompt) { AuthorName = "User" },
+            false => new ChatMessageContent(AuthorRole.System, prompt) { AuthorName = "Producer" }
+        };
+        
+        chatMessages.Add(chatMessage);
+        await InvokeAsync(StateHasChanged);
+
+        Agent[] panellists = PanelService.GetPanellists(matchData, audienceTone, finalMatchPayload);
+        
+        try
+        {
+            if (fromUser)
+            {
+                await FootballAnalyticsApi.IncrementPromptCount();
+            }
+            
+            StudioBroadcastGroupChatManager manager = new StudioBroadcastGroupChatManager
+            {
+                MaximumInvocationCount = 5
+            };
+            
+            GroupChatOrchestration orchestration = new GroupChatOrchestration(manager, panellists)
+            {
+                ResponseCallback = response =>
+                {
+                    if (cancellationToken.IsCancellationRequested || response.Role == AuthorRole.Tool || response.Items.Any(item => item is FunctionCallContent or FunctionResultContent) || string.IsNullOrWhiteSpace(response.Content))
+                    {
+                        return ValueTask.CompletedTask;
+                    }
+
+                    chatMessages.Add(response);
+                    _ = InvokeAsync(StateHasChanged);
+
+                    return ValueTask.CompletedTask;
+                }
+            };
+
+            InProcessRuntime runtime = new InProcessRuntime();
+            await runtime.StartAsync(cancellationToken);
+
+            try
+            {
+                OrchestrationResult<string> result = await orchestration.InvokeAsync(prompt, runtime, cancellationToken);
+                await result.GetValueAsync(TimeSpan.FromSeconds(60), cancellationToken);
+            }
+            finally
+            {
+                if (!cancellationToken.IsCancellationRequested)
+                {
+                    await runtime.RunUntilIdleAsync();
+                }
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            //Ignore
+        }
+        catch (TimeoutException)
+        {
+            if (!cancellationToken.IsCancellationRequested)
+            {
+                chatMessages.Add(new ChatMessageContent(AuthorRole.System, "That's all the time we have for that question, time for our next one!")
+                {
+                    AuthorName = "Producer"
+                });
+            }
+        }
+        catch (Exception)
+        {
+            if (!cancellationToken.IsCancellationRequested)
+            {
+                chatMessages.Add(new ChatMessageContent(AuthorRole.System, "We've encountered some technical issues. Please stand by...")
+                {
+                    AuthorName = "Producer"
+                });
+            }
+        }
+        finally
+        {
+            if (ReferenceEquals(_chatCts, localCts))
+            {
+                _chatCts = null;
+                isProcessing = false;
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+    }
+
+    private static string SetAgentBadgeStyle(string? authorName) => authorName switch
+    {
+        "Producer" => "studio-badge-outline",
+        "Jimmy" => "studio-badge-primary",
+        "StattoSam" => "studio-badge-tertiary",
+        "Macca" => "studio-badge-secondary",
+        "Sophie" => "studio-badge-secondary",
+        "Rico" => "studio-badge-primary",
+        _ => "studio-badge-outline"
+    };
+
+    private static string GetEventLogBackground(string eventType) => eventType switch
+    {
+        "Goal" => "border-start border-4 border-success",
+        "Interception" => "border-start border-4 border-info",
+        "Tackle" => "border-start border-4 border-warning",
+        _ => "border-start border-4 border-secondary"
+    };
+
+    private sealed class MatchMetricChartPoint
+    {
+        public string Metric { get; init; } = string.Empty;
+        public double Value { get; init; }
+    }
+
+    private List<MatchMetricChartPoint> HomeTeamSummaryChartData =>
+        _homeTeam is null
+            ? []
+            :
+            [
+                new MatchMetricChartPoint { Metric = "Goals", Value = (double)_homeTeam.Goals },
+                new MatchMetricChartPoint { Metric = "Shots", Value = (double)_homeTeam.TotalShots },
+                new MatchMetricChartPoint { Metric = "xG", Value = (double)_homeTeam.ExpectedGoals },
+                new MatchMetricChartPoint { Metric = "Pass Acc %", Value = (double)_homeTeam.PassAccuracy },
+                new MatchMetricChartPoint { Metric = "Avg Pressure", Value = (double)_homeTeam.AveragePressure }
+            ];
+
+    private List<MatchMetricChartPoint> AwayTeamSummaryChartData =>
+        _awayTeam is null
+            ? []
+            :
+            [
+                new MatchMetricChartPoint { Metric = "Goals", Value = _awayTeam.Goals },
+                new MatchMetricChartPoint { Metric = "Shots", Value = _awayTeam.TotalShots },
+                new MatchMetricChartPoint { Metric = "xG", Value = (double)_awayTeam.ExpectedGoals },
+                new MatchMetricChartPoint { Metric = "Pass Acc %", Value = (double)_awayTeam.PassAccuracy },
+                new MatchMetricChartPoint { Metric = "Avg Pressure", Value = (double)_awayTeam.AveragePressure }
+            ];
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_hubConnection is not null)
+        {
+            await _hubConnection.DisposeAsync();
+        }
+
+        if (_chatCts is not null)
+        {
+            try
+            {
+                await _chatCts.CancelAsync();
+                _chatCts.Dispose();
+            }
+            catch
+            {
+                // Ignore
+            }
+        }
+    }
+
+}
