@@ -1,5 +1,16 @@
 **Beyond The Score** is an AI-powered football studio where 5 virtual hosts collaborate in real time to transform match events into explainable insights, tactical analysis, personalised commentary, and automated match narratives.
 
+## Demo & Submission
+
+- 🚀 [Live Demo](https://webfrontend-2ryzs5ku6vwj4.azurewebsites.net/)
+- 🎥 [Project Submission & Demo Video](https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/126562)
+
+This environment is provided solely for evaluation of the Beyond The Score hackathon submission. Authentication is provided via Auth0 and sign-in is entirely optional and at your own discretion.
+
+The demo environment and associated data are temporary and are scheduled to be removed following the conclusion of the Microsoft Developer Hackathon on 20 November 2026. The project is intended for demonstration and evaluation purposes only.
+
+Beyond The Score demonstrates how multiple AI agents collaborate to transform football events into explainable match intelligence, narratives, and personalised fan experiences.
+
 ## Meet Your Hosts
 
 ### Jimmy
